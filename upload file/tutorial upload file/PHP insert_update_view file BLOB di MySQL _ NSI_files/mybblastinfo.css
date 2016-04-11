@@ -1,0 +1,64 @@
+#mybbinfoaccordion section, #mybbinfoaccordion h1, #mybbinfoaccordion p {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#mybbinfoaccordion {
+  margin-bottom:30px;
+}
+#mybbinfoaccordion h1 {
+line-height: 1.2;
+font-size: 13px;
+background-color: #E6E6E6;
+margin: 5px;
+padding: 10px 10px 10px 30px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+
+#mybbinfoaccordion h1 a {
+  color:black;
+}
+#mybbinfoaccordion section {
+  overflow:hidden;
+  height:auto;
+}
+#mybbinfoaccordion p {
+  color:black;
+text-align: justify;
+  text-justify: newspaper;
+  }
+#mybbinfoaccordion p  li{
+margin:7px;
+color:black;
+text-align: justify;
+display: inline;
+  }
+#mybbinfoaccordion section.ac_hidden p:not(.pointer) {
+  color:#fff;
+}
+
+#mybbinfoaccordion section.ac_hidden {
+  height:44px;
+}
+#mybbinfoaccordion section:not(.ac_hidden) h1 {
+  background-color:#CCCCCC;
+}
+
+#mybbinfoaccordion section:not(.ac_hidden) .pointer {
+  display:block;
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  transform:rotate(90deg);
+  padding:5px;
+}
+#mybbinfoaccordion section a {
+margin:15px;
+font-family:13px;
+}
+ul#mli_items li{margin-left: 26px;list-style: none;}
+.refreshmli{cursor:pointer;margin-top: 10px;width: 25px;
+height: 25px;}

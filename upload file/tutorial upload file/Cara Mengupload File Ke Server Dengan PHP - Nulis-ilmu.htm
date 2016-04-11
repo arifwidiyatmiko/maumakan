@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html><head>
+<link href="http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" hreflang="x-default" rel="alternate">
+<!-- [ Meta Tag SEO ] -->
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="blogger" name="generator">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<link href="http://www.blogger.com/openid-server.g" rel="openid.server">
+<link href="http://www.nulis-ilmu.com/" rel="openid.delegate">
+<link href="http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" rel="canonical">
+<title>Cara Mengupload File Ke Server Dengan PHP - Nulis-ilmu</title>
+<meta content="" name="description">
+<link media="all" href="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/css.css" rel="stylesheet"><link media="all" href="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/css_002.css" rel="stylesheet"><script async="" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/cbgapi.loaded_1"></script><script async="" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/cbgapi.loaded_0"></script><script src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/ca-pub-8160817978930537.js"></script><script src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/analytics.js" async=""></script><script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://arlinafix.blogspot.com/", "potentialAction": { "@type": "SearchAction", "target": "http://arlinafix.blogspot.com/?q={search_term}", "query-input": "required name=search_term" } }</script>
+<meta content="Cara Mengupload File Ke Server Dengan PHP, Nulis-ilmu: Cara Mengupload File Ke Server Dengan PHP, Nulis-ilmu" name="keywords">
+<link href="http://www.nulis-ilmu.com/feeds/posts/default" rel="alternate" title="Nulis-ilmu - Atom" type="application/atom+xml">
+<link href="http://www.nulis-ilmu.com/feeds/posts/default?alt=rss" rel="alternate" title="Nulis-ilmu - RSS" type="application/rss+xml">
+<link href="http://www.blogger.com/feeds/597297783102083591/posts/default" rel="alternate" title="Nulis-ilmu - Atom" type="application/atom+xml">
+<link href="http://3.bp.blogspot.com/-ezbJbYTTl5Y/VEw7YgH6eFI/AAAAAAAAAgA/kPlABz-12PY/s72-c/cara-upload-file-dengan-php.png" rel="image_src">
+<link href="http://www.nulis-ilmu.com/favicon.ico" rel="icon" type="image/x-icon">
+<link href="https://plus.google.com/111895217112783348282/posts" rel="publisher">
+<link href="https://plus.google.com/111895217112783348282/about" rel="author">
+<link href="https://plus.google.com/111895217112783348282" rel="me">
+<meta content="VXxWZdUvlSHj_gihjdzt6qCwP_VUJNn22GSL_6nxBWg" name="google-site-verification">
+<meta content="EBA793711220BC0A3D14366C14FCBF5D" name="msvalidate.01">
+<meta content="KDo8HQ-y9vIoEA3amnIHT_lmSmY" name="alexaVerifyID">
+<meta content="Indonesia" name="geo.placename">
+<meta content="Eko Purnomo" name="Author">
+<meta content="general" name="rating">
+<meta content="id" name="geo.country">
+<!-- [ Social Media meta tag ] -->
+<meta content="Nulis-ilmu: Cara Mengupload File Ke Server Dengan PHP" property="og:title">
+<meta content="article" property="og:type">
+<meta content="http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" property="og:url">
+<meta content="http://3.bp.blogspot.com/-ezbJbYTTl5Y/VEw7YgH6eFI/AAAAAAAAAgA/kPlABz-12PY/s1600/cara-upload-file-dengan-php.png" property="og:image">
+<meta content="Tulisan tentang ilmu komputer, elektronika, website, php, javascript, html, css, internet, blog, pemrograman, mikrokontroler dan pengalaman pribadi" property="og:description">
+<meta content="Nulis-ilmu" property="og:site_name">
+<meta content="562901580420523" property="fb:app_id">
+<meta content="100005787193074" property="fb:admins">
+<meta content="en_US" property="og:locale">
+<meta content="en_GB" property="og:locale:alternate">
+<meta content="id_ID" property="og:locale:alternate">
+<meta content="summary" name="twitter:card">
+<meta content="Nulis-ilmu: Cara Mengupload File Ke Server Dengan PHP" name="twitter:title">
+<style type="text/css">
+<!-- /*<link type='text/css' rel='stylesheet' href='https://www.blogger.com/static/v1/widgets/4235989350-widget_css_bundle.css' />
+<link type='text/css' rel='stylesheet' href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=597297783102083591&zx=4525ecf2-8f73-4367-8648-cb7c8e770287' />
+<style id='page-skin-1' type='text/css'><!--
+/*
+Theme Name       : Vikka Fast and Responsive Blogger Template
+Theme Published  : 13 Agustus 2015
+Theme Base Color : White and Blue
+Theme Designer   : Arlina Design
+Designer URL     : www.arlinadzgn.com
+Thanks to        : All supported
+Theme License    : This free Blogger template is licensed under the Creative Commons Attribution 3.0 License, which permits both personal and commercial use.
+However, to satisfy the &#39;attribution&#39; clause of the license, you are required to keep the footer links intact which provides due credit to its authors. For more specific details about the license, you may visit the URL below:
+http://creativecommons.org/licenses/by/3.0/
+*/
+/* CSS Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+/* HTML5 */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;display:block;}*{margin:0;padding:0;}html{display:block;}
+//ol,ul{list-style:none;}
+blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{background:transparent;}table{border-collapse:collapse;border-spacing:0;}
+/* Body Layout */
+body#layout ul,#layout ul {display:none;}
+body#layout #outer-wrapper, body#layout .post-inner, body#layout .sidebar, body#layout .sidebar-two {padding:0;}
+body#layout #wrapper, body#layout .post-inner, body#layout .sidebar-inner {padding:0;}
+body#layout .header-wrapper {margin-top:0;}
+body#layout #header-wrapper {min-height:0px;width:100%;}
+body#layout #header2 {width:30%;float:left;}
+body#layout #header-right {width:60%;float:right;}
+#layout,#layout .widget-content,#layout .add_widget {border:none;}
+body#layout .add_widget {border:1px solid #ddd;}
+#layout .add_widget a {color:#333;}
+#layout #header-wrapper{min-height:0px;width:100%;margin:10px 0 0 0;}
+#layout #footer-wrapper .footer-column{width:33.33%;float:left}
+#layout #footer-wrapper #column1,#layout #footer-wrapper #column2{margin:0}
+#layout #main-wrapper{width:70%;float:left}
+#layout #sidebar-wrapper{width:32%;left:0;padding:0;float:right}
+#layout .draggable-widget .widget-wrap2 {background:#c1cfd9;}
+#layout #banner,#layout #banner2 {background-color:#444;padding:20px 0!important;margin-bottom:20px;}
+#layout #banner .widget,#layout #banner2 .widget{width:80%;margin:5px auto!important;overflow:hidden;float:none}
+#layout #banner .add_widget,#layout #banner2 .add_widget{width:80%;margin:5px auto!important;overflow:hidden;float:none}
+#footer-adwidget .footer-widget {width:31.7%;float:left;margin-left:10px;}
+#footer-wrapper {overflow:hidden;margin:0 auto 20px auto;max-width:970px;padding:15px 0 0;}
+/* Layout */
+body {background:#e3e3e3;font-family:verdana;font-size:13px;font-weight:400;text-align:left;color:#222;margin:0;padding:0;}
+.navbar,.post-feeds,.feed-links{display:none;}
+.section,.widget{margin:0;padding:0;}
+strong,b{font-weight:bold;padding:0;}
+cite,em,i{font-style:italic;}
+a:link,a:visited {color:#444;text-decoration:none}
+a:hover,a:hover:visited {color:#45a2db}
+a img{border:none;border-width:0;outline:none;}
+img{max-width:100%;vertical-align:middle;border:0;}
+abbr,acronym{border-bottom:1px dotted;cursor:help;}
+sup,sub{vertical-align:baseline;position:relative;top:-.4em;font-size:86%;}
+sub{top:.4em;}small{font-size:86%;}
+kbd {display:inline-block;border:1px solid #ccc;border-radius:4px;padding:0.1em 0.5em 0.05em 0.5em;margin:0 0.2em;background-color:#fff;}
+mark{background-color:#ffce00;color:#182025;}
+p,blockquote,pre,table,figure,hr,form,ol,ul,dl{margin:1.5em 0;}
+hr{height:1px;border:none;background-color:#999;}
+code,kbd,pre,samp{font-family:monospace,monospace;}
+pre{white-space:pre;word-wrap:normal;overflow:auto;}
+blockquote {background:#fcf4ca;position:relative;margin:15px 0;border-left:3px solid #c69f73;font-weight:400;padding:12px 15px;color:#77735c;box-shadow:3px 3px rgba(0,0,0,0.1);}
+*:focus {outline:0!important;}
+h1, h2, h3, h4, h5, h6 {text-transform:capitalize; font-weight:bold; letter-spacing:1px; margin: 8px 0;}
+h1{font-size:200%}h2{font-size:180%}h3{font-size:160%;margin-top: 20px;}h4{font-size:140%}h5{font-size:120%}h6{font-size:100%}
+.post-body h1{font-size:200%}.post-body h2{font-size:180%}.post-body h3{font-size:160%}.post-body h4{font-size:140%}.post-body h5{font-size:120%}.post-body h6{font-size:100%}
+input,button,select,textarea{font-size:100%;line-height:normal;vertical-align:baseline;}
+textarea{display:block;box-sizing:border-box;}
+input.placeholder_text,textarea.placeholder_text{color:#888}
+.post ul li span{position:relative;display:block;padding:0;margin:.5em 0 .5em 2em;text-decoration:none;transition:all .3s ease-out;}
+//ol {counter-reset:li;list-style:none;font:15px 'Open Sans', 'lucida sans';padding:0;margin:0;}
+ol ol {margin: 0 0 0 2em;}
+.post ol li{position:relative;padding:0;margin:.5em 0 .5em 2em;background:#fff;text-decoration:none;transition:all .3s;}
+.post ol li:before {position:absolute;left:-2.5em;top:50%;margin-top:-1em;height:2em;width:2em;line-height:2em;text-align:center;}
+.post-body ul {position:relative;padding:0;margin:.5em 0 .5em 1.5em;text-decoration:none;transition:all .3s ease-out;}
+/* Post Table */
+.post-body table {width:100%;}
+.post-body table td, .post-body table caption{border:1px solid #e6e6e6;padding:10px;text-align:left;vertical-align:top;}
+.post-body table th {border:1px solid #009abf;padding:10px;text-align:left;vertical-align:top;}
+.post-body table.tr-caption-container {border:1px solid #eee;}
+.post-body th{font-weight:700;}
+.post-body table caption{border:none;font-style:italic;}
+.post-body td, .post-body th{vertical-align:top;text-align:left;font-size:13px;padding:3px 5px;border:1px solid #eee;}
+.post-body th{background:#00acd6;color:#fff;}
+.post-body th:hover{background:#009fc6;}
+.post-body td a{color:#444;}
+.post-body td a:hover{color:#cf4d35;}
+.post-body table.tr-caption-container td {border:none;padding:8px;}
+.post-body table.tr-caption-container, .post-body table.tr-caption-container img, .post-body img {max-width:100%;height:auto;}
+//.post-body li {list-style-type:square;}
+.post-body td.tr-caption {color:#666;font-size:80%;padding:0px 8px 8px !important;}
+/* custom css by nulis-ilmu.com */
+/*style for demo and download button for template posting*/
+.button{display:inline-block;vertical-align:middle;width:170px;margin:4px 2px;padding:8px;font:normal normal 16px/normal 'Roboto',sans-serif;color:#000;line-height:normal;background-color:white;border:1px solid #bbb;outline:none;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.05);-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.05);box-shadow:inset 0 1px 1px rgba(0,0,0,.05);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.button{position:relative;width:auto;font-weight:bold;line-height:normal;color:#E8F5FF!important;text-align:center;text-shadow:0 -1px 0 rgba(0,0,0,.2);background-color:#3498db;border:none;padding-left:14px;padding-right:14px;cursor:pointer}
+.demo-themes .button{float:left;width:48.5%;text-decoration:none}
+.download-themes .button{float:right;width:48.5%;text-decoration:none}
+.demo-themes .button:hover,.download-themes .button:hover{text-decoration:none}
+/*style for syntax highlighter*/
+.dp-highlighter
+{
+font-family: "Consolas", "Monaco", "Courier New", Courier, monospace;
+font-size: 12px;
+line-height: 1.8em;
+background-color: #E7E5DC;
+width: 99%;
+overflow: auto;
+margin: 18px 0 18px 0 !important;
+padding-top: 1px;
+text-align: left;
+/* adds a little border on top when controls are hidden */
+}
+/* clear styles */
+.dp-highlighter ol,
+.dp-highlighter ol li,
+.dp-highlighter ol li span
+{
+margin: 0;
+padding: 0;
+border: none;
+}
+.dp-highlighter a,
+.dp-highlighter a:hover
+{
+background: none;
+border: none;
+padding: 0;
+margin: 0;
+}
+.dp-highlighter .bar
+{
+padding-left: 45px;
+}
+.dp-highlighter.collapsed .bar,
+.dp-highlighter.nogutter .bar
+{
+padding-left: 0px;
+}
+.dp-highlighter ol
+{
+list-style: decimal; /* for ie */
+background-color: #fff;
+margin: 0px 0px 1px 45px !important; /* 1px bottom margin seems to fix occasional Firefox scrolling */
+padding: 0px;
+color: #5C5C5C;
+}
+.dp-highlighter.nogutter ol,
+.dp-highlighter.nogutter ol li
+{
+list-style: none !important;
+margin-left: 0px !important;
+}
+.dp-highlighter ol li,
+.dp-highlighter .columns div
+{
+list-style: decimal-leading-zero; /* better look for others, override cascade from OL */
+list-style-position: outside !important;
+border-left: 3px solid #6CE26C;
+background-color: #F8F8F8;
+color: #5C5C5C;
+padding: 0 3px 0 10px !important;
+margin: 0 !important;
+line-height: 1.8em;
+}
+.dp-highlighter.nogutter ol li,
+.dp-highlighter.nogutter .columns div
+{
+border: 0;
+}
+.dp-highlighter .columns
+{
+background-color: #F8F8F8;
+color: gray;
+overflow: hidden;
+width: 100%;
+}
+.dp-highlighter .columns div
+{
+padding-bottom: 5px;
+}
+.dp-highlighter ol li.alt
+{
+background-color: #FFF;
+color: inherit;
+}
+.dp-highlighter ol li span
+{
+color: black;
+background-color: inherit;
+}
+/* Adjust some properties when collapsed */
+.dp-highlighter.collapsed ol
+{
+margin: 0px;
+}
+.dp-highlighter.collapsed ol li
+{
+display: none;
+}
+/* Additional modifications when in print-view */
+.dp-highlighter.printing
+{
+border: none;
+}
+.dp-highlighter.printing .tools
+{
+display: none !important;
+}
+.dp-highlighter.printing li
+{
+display: list-item !important;
+}
+/* Styles for the tools */
+.dp-highlighter .tools
+{
+padding: 3px 8px 3px 10px;
+font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+color: silver;
+background-color: #f8f8f8;
+padding-bottom: 10px;
+border-left: 3px solid #6CE26C;
+}
+.dp-highlighter.nogutter .tools
+{
+border-left: 0;
+}
+.dp-highlighter.collapsed .tools
+{
+border-bottom: 0;
+}
+.dp-highlighter .tools a
+{
+font-size: 9px;
+color: #a0a0a0;
+background-color: inherit;
+text-decoration: none;
+margin-right: 10px;
+}
+.dp-highlighter .tools a:hover
+{
+color: red;
+background-color: inherit;
+text-decoration: underline;
+}
+/* About dialog styles */
+.dp-about { background-color: #fff; color: #333; margin: 0px; padding: 0px; }
+.dp-about table { width: 100%; height: 100%; font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; }
+.dp-about td { padding: 10px; vertical-align: top; }
+.dp-about .copy { border-bottom: 1px solid #ACA899; height: 95%; }
+.dp-about .title { color: red; background-color: inherit; font-weight: bold; }
+.dp-about .para { margin: 0 0 4px 0; }
+.dp-about .footer { background-color: #ECEADB; color: #333; border-top: 1px solid #fff; text-align: right; }
+.dp-about .close { font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; background-color: #ECEADB; color: #333; width: 60px; height: 22px; }
+/* Language specific styles */
+.dp-highlighter .comment, .dp-highlighter .comments { color: #008200; background-color: inherit; }
+.dp-highlighter .string { color: blue; background-color: inherit; }
+.dp-highlighter .keyword { color: #069; font-weight: bold; background-color: inherit; }
+.dp-highlighter .preprocessor { color: gray; background-color: inherit; }
+/*style for contact form*/
+.contact-form-name, .contact-form-email { max-width: 200px; width: 100%; } .contact-form-email-message { max-width: 400px; width: 100%; height: 150px; }
+/*style for ads title*/
+.ads-title {
+color: #DDD;
+font-size: 10px;
+font-family: arial, sans serif;
+text-align: center;
+
+--></style>
+<style type="text/css">
+/* Arlina Fixed Layout */
+.quickedit {display:none}
+/* Arlina Template Wrapper */
+#wrapper {background:#fff;max-width:970px;margin:auto;padding:0;overflow:hidden;border-top:4px solid #45a2db;}
+/* Arlina Search Form */
+.menusearch{display:block;margin:15px 0 0 15px;padding:0}
+.searchform{padding:10px;margin:0;background:#fefefe;overflow:hidden;border:1px solid #e0e0e0;transition:all .3s}
+.searchform:hover,.searchform:active{border-color:#bbb}
+.searchform input{color:#999;padding:0;margin:0;transition:all .6s}
+.searchform input:focus{color:#444;}
+.searchform .searchfield{background:transparent;border:0;outline:none;width:100%;}
+/* Arlina Header Wrapper */
+#header{position:relative;display:block;padding:15px;overflow:hidden;}
+#header2{float:left;max-width:350px}
+#header .title{color:#444;font-size:260%;letter-spacing:1px;line-height:1.4em;margin:0;font-family:serif;font-weight:bold;}
+#header .title a {color:#444;}
+#header .title a:hover {color:#45a2db;}
+#header p.description {margin:0;}
+.header img,.header-right img {display:block;}
+.header-right img {max-height:60px;}
+.header-right{float:right;padding:0;overflow:hidden;margin:0;width:100%;max-width:468px}
+/* Arlina Main Navigation */
+#navi-arlina{height:45px;text-transform:uppercase;font-size:100%;background:#2980b9;color:#fff;font-family:Oswald;margin:0 15px}
+#navi-arlina ul.menus{background:#2980b9;height:auto;overflow:hidden;position:absolute;z-index:99;display:none}
+#navi-arlina a{display:block;line-height:45px;padding:0 15px;text-decoration:none;color:#fff}
+#navi-arlina ul,#navi-arlina li {margin:0 auto;padding:0;list-style:none}
+#navi-arlina ul {height:45px;}
+#navi-arlina li {float:left;display:inline-block;position:relative}
+#navi-arlina input {display:none;margin:0;padding:0;width:80px;height:45px;opacity:0;cursor:pointer}
+#navi-arlina label {display:none;width:55px;height:48px;line-height:48px;text-align:center}
+#navi-arlina label span {font-size:16px;position:absolute;left:55px}
+#navi-arlina ul.menus li {display:block;width:100%;text-transform:none;text-shadow:none;}
+#navi-arlina ul.menus a {color:#fff;line-height:55px}
+#navi-arlina li a:hover {background:#3a91c7}
+#navi-arlina li:hover ul.menus,#navi-arlina li:hover > ul {display:block}
+#navi-arlina ul.menus a:hover {background:#444;color:#fff}
+#navi-arlina li ul{background:#444;margin:0;width:150px;height:auto;position:absolute;top:45px;left:0;z-index:10;display:none}
+#navi-arlina li li {display:block;float:none}
+#navi-arlina li li:hover {background:#444}
+#navi-arlina li li a:hover {background:#444;text-decoration:underline}
+#navi-arlina li ul ul {left:100%;top:0}
+#navi-arlina li li > a{display:block;padding:0 10px;margin:0;line-height:30px;text-decoration:none;color:#fff}
+#navi-top{height:25px;text-transform:uppercase;font-size:100%;border-bottom:1px solid;color:#2980b9;font-family:Oswald;margin:10px 15px 0 15px;padding-bottom:2px;}
+#navi-top ul.menus{background:#2980b9;height:auto;overflow:hidden;position:absolute;z-index:99;display:none}
+#navi-top a{display:block;line-height:25px;padding:0 30px 0 0;text-decoration:none;color:#2980b9}
+#navi-top ul,#navi-top li {margin:0 auto;padding:0;list-style:none}
+#navi-top ul {height:25px;}
+#navi-top li {float:left;display:inline-block;position:relative}
+#navi-top input {display:none;margin:0;padding:0;width:80px;height:45px;opacity:0;cursor:pointer}
+#navi-top label {display:none;width:55px;height:48px;line-height:48px;text-align:center}
+#navi-top label span {font-size:16px;position:absolute;left:55px}
+#navi-top ul.menus li {display:block;width:100%;text-transform:none;text-shadow:none;}
+#navi-top ul.menus a {color:#fff;line-height:55px}
+#navi-top li a:hover {color:#56b3ec}
+#navi-top li:hover ul.menus,#navi-top li:hover > ul {display:block}
+#navi-top ul.menus a:hover {background:#444;color:#fff}
+#navi-top li ul{background:#444;margin:0;width:150px;height:auto;position:absolute;top:45px;left:0;z-index:10;display:none}
+#navi-top li li {display:block;float:none}
+#navi-top li li:hover {background:#444}
+#navi-top li li a:hover {background:#444;text-decoration:underline}
+#navi-top li ul ul {left:100%;top:0}
+#navi-top li li > a{display:block;padding:0 10px;margin:0;line-height:30px;text-decoration:none;color:#fff}
+/* Arlina Post Wrapper */
+#main-wrapper{width:66%;float:left;padding:0;word-wrap:break-word;overflow:hidden;border-right:1px solid #e9e9e9;}
+#main{padding:15px 15px 0}
+.main .Blog{border-bottom-width:0 }
+.main .widget{margin:0 0 .2em;padding:0 0 .2em}
+.date-header{display:none!important}
+h1.post-title.entry-title,h2.post-title.entry-title {font-family:Oswald;font-size:22px;text-transform:uppercase;font-weight:500}
+h1.post-title.entry-title a,h2.post-title.entry-title a{color:#222;}
+h1.post-title.entry-title a:hover,h2.post-title.entry-title a:hover{color:#338bc0;}
+blockquote {color: #666; font-size: 16px; font-style: italic; border-left: 10px solid #f7f7f7; margin: 20px 20px;padding: 0 30px 0 20px; overflow: hidden;}
+.post-body {font: normal 15px verdana;line-height: 1.8em;text-align:justify;margin-top: 10px;}
+.post-info{display:block;padding:5px 0;color:#888;line-height:1.6em;font-size:11px;overflow:hidden;margin:5px 0}
+.post-info abbr {border:0;}
+.post-timestamp,.author-info,.comment-info{border-right:1px solid #ddd;margin-right:10px;padding:0 10px 0 0}
+.post-info a.label-block{background:#fefefe;padding:2px 4px;color:#888;}
+.post-info a:hover{text-decoration:underline}
+.post-body img,.post-body video,.post-body object {max-width:100%}
+.breadcrumbs{padding:5px 0px;color:#333;background:#fafafa;margin:0 0 10px 0;font-size:13px;}
+.breadcrumbs a{color:#2980b9}
+.breadcrumbs a:hover{color:#444;text-decoration:underline}
+.post-footer{line-height:1.6em}
+.post-footer a{color:#45a2db;font-weight:700}
+.feed-links{clear:both;line-height:2.5em;}
+/* Arlina Post Navigation */
+#blog-pager{position:relative;display:block;width:100%;margin:15px 10px 15px 0;text-align:center}
+#blog-pager-newer-link{float:left}
+#blog-pager-older-link{float:right}
+#blog-pager a:link,#blog-pager a:visited{color:#333;font-size:11px!important;padding:6px 15px;margin:5px;background:#fff;border:1px solid #e0e0e0}
+#blog-pager a:hover{text-decoration:underline}
+/* Arlina Sidebar Wrapper */
+#sidebar-wrapper{padding:0 15px 0 0;width:32%;float:right;word-wrap:break-word;overflow:hidden}
+#sidebar-wrapper h2,#sidebar-wrapper h3,#sidebar-wrapper h4{position:relative;margin:0 0 10px;text-transform:uppercase;padding:10px 0;font-size:15px;color:#343434;font-family:Oswald;border-bottom:2px solid #e0e0e0;font-weight:500;letter-spacing:1px;}
+#sidebar-wrapper h2:before,#sidebar-wrapper h3:before,#sidebar-wrapper h4:before{content:'';position:absolute;bottom:-2px;left:0;right:0;background:#fc4f69;width:60px;height:2px}
+#sidebar-wrapper .widget ul{margin:5px 0;padding:5px 0}
+.widget-content {margin:0;overflow:hidden}
+.sidebar {line-height:1.5em;padding:0 0 0 15px;font-size:15px;}
+.sidebar ul {padding:0;margin:0}
+.BlogArchive #ArchiveList ul li {text-indent:0!important}
+.sidebar ul li{margin:0;padding:5px 0;border-bottom:1px solid #f1f1f1}
+.sidebar .widget {margin:10px 0}
+/* Arlina Footer Wrapper */
+#footer-wrapper{text-align:left;overflow:hidden;background:#363636;margin:auto;max-width:970px;padding:15px 0 0;}
+#footer-adwidget .footer-widget {width:31.7%;float:left;margin-left:10px;}
+#footer-adwidget {max-width:970px;overflow:hidden;margin:0 auto;}
+#footer-wrapper h2,#footer-wrapper h3 {overflow:hidden;position:relative;font-family:'Oswald';font-size:15px;font-weight:500;color:#fff;padding:10px 0;text-transform:uppercase;display:block;border-bottom:1px solid #555;letter-spacing:1px;}
+#footer-wrapper h2:after,#footer-wrapper h3:after{content:'';display:inline-block;position:absolute;height:14px;top:0;margin:13px 0 12px 10px;width:100%;background:url(http://4.bp.blogspot.com/-R2WTW6O9E1o/VX7dqIGT1eI/AAAAAAAACc4/pyvQDMMLX3E/s1600/repeat-bg.png)repeat}
+#footx1,#footx2,#footx3 {margin:0 .2%}
+#footer-adwidget {max-width:970px;overflow:hidden;margin:0 auto;}
+#footer-wrapper .widget-content {text-align:left;font-family:'Open Sans',Helvetica;margin:0;color:#f9f9f9;}
+#footer-wrapper .widget-content li {margin-left:-14px;color:#f9f9f9}
+#footer-wrapper .widget-content ul {margin:0;}
+#footer-wrapper .widget li {margin:5px 0 0 0;padding:5px 0 0 0;display:block;}
+.footer li a {padding-top:0;padding-right:0;line-height:2em;font-size:13px;font-weight:400;font-family:'Open Sans',Helvetica;color:#f9f9f9;margin:0}
+.footer li a:hover {color:#fff;}
+#footer-last{overflow:hidden;background:#2e2e2e;text-align:center;padding:20px;margin:auto;border-top:1px solid #464646;text-transform:uppercase;}
+.cpleft,#ftright{display:inline-block;color:#eee;font-size:11px}
+.cpleft a,#ftright a {color:#eee;text-decoration:none;}
+.cpleft a:hover,#ftright a:hover {color:#fff;text-decoration:underline;}
+/* Arlina Popular Post */
+.item-snippet {margin-left:66px;font-size: 86%;}
+.PopularPosts .item-thumbnail{margin:0;}
+#PopularPosts1 h2,#PopularPosts2 h2 {margin:0;}
+.PopularPosts .popular-posts ul li{list-style:none;overflow:hidden;margin:0;}
+.PopularPosts .popular-posts ul li:first-child{border-top:0}
+#PopularPosts1 .popular-posts,#PopularPosts2 .popular-posts {position:relative;}
+.PopularPosts .popular-posts ul li a {color:#444;transition:all .3s}
+.PopularPosts .popular-posts ul li a:hover {color:#444;text-decoration:underline}
+.PopularPosts .item-title{display:table-cell;vertical-align:middle;line-height:normal;text-overflow:ellipsis;padding:0 0 0 10px}
+.PopularPosts .item-thumbnail img {background:#fff;display:block;float:left;width:50px;height:auto;padding:2px;border:1px solid #ccc;transition:all .3s}
+.PopularPosts .item-thumbnail img:hover{border-color:#aaa;}
+.popular-posts ul {padding-left:0;}
+/* Arlina Label */
+.label-size-1,.label-size-2,.label-size-3,.label-size-4,.label-size-5 {font-size:100%;opacity:1}
+.cloud-label-widget-content{text-align:left;padding:0;}
+.label-count {white-space:nowrap;display:inline-block;}
+#sidebar-wrapper .Label li{position:relative;background:#fff;color:#444;padding:0;margin:0;text-align:left;width:100%;transition:all .3s}
+#sidebar-wrapper .Label li:hover {background:#fff;color:#cf4d35;}
+#sidebar-wrapper .Label li:before {content:"";position:absolute;width:2px;height:100%;background:#4fafe9;transition:all .2s ease-in-out;}
+#sidebar-wrapper .Label li:hover:before {width:100%;}
+#sidebar-wrapper .Label li a{padding:0 0 0 20px;display:block;position:relative;line-height:42px;color:#787878;text-decoration:none;transition:all .3s}
+#sidebar-wrapper .Label li a:hover {color:#fff;}
+#sidebar-wrapper .Label li span{float:right;height:42px;line-height:42px;width:42px;text-align:center;display:inline-block;background:#4fafe9;color:#FFF;position:absolute;top:0;right:0;z-index:2}
+#sidebar-wrapper .Label li:nth-child(1) span,#sidebar-wrapper .Label li:nth-child(1):before,#sidebar-wrapper .Label li:nth-child(7) span,#sidebar-wrapper .Label li:nth-child(7):before {background:#ca85ca;}
+#sidebar-wrapper .Label li:nth-child(2) span,#sidebar-wrapper .Label li:nth-child(2):before,#sidebar-wrapper .Label li:nth-child(8) span,#sidebar-wrapper .Label li:nth-child(8):before {background:#e54e7e;}
+#sidebar-wrapper .Label li:nth-child(3) span,#sidebar-wrapper .Label li:nth-child(3):before,#sidebar-wrapper .Label li:nth-child(9) span,#sidebar-wrapper .Label li:nth-child(9):before {background:#61c436;}
+#sidebar-wrapper .Label li:nth-child(4) span,#sidebar-wrapper .Label li:nth-child(4):before,#sidebar-wrapper .Label li:nth-child(10) span,#sidebar-wrapper .Label li:nth-child(10):before {background:#f4b23f;}
+#sidebar-wrapper .Label li:nth-child(5) span,#sidebar-wrapper .Label li:nth-child(5):before,#sidebar-wrapper .Label li:nth-child(11) span,#sidebar-wrapper .Label li:nth-child(11):before {background:#46c49c;}
+#sidebar-wrapper .Label li:nth-child(6) span,#sidebar-wrapper .Label li:nth-child(6):before,#sidebar-wrapper .Label li:nth-child(12) span,#sidebar-wrapper .Label li:nth-child(12):before {background:#607ec7;}
+#sidebar-wrapper .label-size{background:#45a2db;position:relative;display:block;float:left;margin:0 1px 1px 0;font-size:11px;transition:all .3s}
+#sidebar-wrapper .label-size a{display:inline-block;color:#fff;padding:4px 6px;font-weight:400;transition:all .3s}
+#sidebar-wrapper .label-count{display:inline-block;background:#3a91c7;color:#fff;padding:5px 8px;text-align:center;transition:all .3s}
+#sidebar-wrapper .label-size a:hover{color:#fff;text-decoration:underline}
+#footer-wrapper .label-size{background:#2e2e2e;color:#eee;display:block;float:left;margin:0 1px 1px 0;font-size:11px;transition:initial;}
+#footer-wrapper .label-size a{display:inline-block;color:#eee;padding:4px 6px;font-weight:400;transition:all .3s}
+#footer-wrapper .label-size a:hover {color:#fff;text-decoration:underline}
+#footer-wrapper .label-count{white-space:nowrap;background:#2e2e2e;display:inline-block;color:#eee;padding:5px 8px;text-align:center}
+#footer-wrapper .Label li{padding:5px 0;margin:0;text-align:left;border-bottom:1px solid #444;transition:all .3s}
+#footer-wrapper .Label li a {color:#eee;transition:all .3s;}
+#footer-wrapper .Label li span{background:#2e2e2e;float:right;color:#eee;margin:0;padding:4px 6px;text-align:center;font-size:13px;font-weight:400;transition:all .3s;}
+#footer-wrapper .Label li a:hover,#footer-wrapper .Label li:hover,#footer-wrapper .Label li span:hover {color:#fff;text-decoration:underline}
+/* Arlina Contact */
+#ContactForm1 {color:#eee}
+#ContactForm1 .contact-form-widget input{display:inline-block;width:100%;border:0;padding:5px 0;margin-top:3px}
+#ContactForm1 #ContactForm1_contact-form-email-message{width:100%;border:0;padding:5px;margin-top:3px}
+#ContactForm1 #ContactForm1_contact-form-submit{background:#fd554c;color:#fff;padding:8px;font-size:90%;letter-spacing:1px;border-radius:1px;cursor:pointer;transition:all .3s}
+#ContactForm1 #ContactForm1_contact-form-submit:hover{background:#df4840;color:#fff}
+#ContactForm1 p#ContactForm1_contact-form-error-message,#ContactForm1 p#ContactForm1_contact-form-success-message {text-align:center;width:100%;display:block;color:#fff;}
+/* Arlina Follow by Email */
+.FollowByEmail .follow-by-email-inner {position:relative;}
+.follow-by-email-inner {background:none repeat scroll 0 0 #363636;padding:15px;}
+.follow-by-email-inner:before {color:#eee;content:'Join and get our latest articles delivered to your email';font-size:12px;font-weight:normal;padding:0 0 0 2px;}
+.FollowByEmail .follow-by-email-inner .follow-by-email-address{border:0;font-size:13px;height:28px;padding-left:5px;width:100%}
+.FollowByEmail .follow-by-email-inner .follow-by-email-submit {background:#fd554c;border:0;color:#fff;cursor:pointer;font-size:11px;height:28px;margin:0 3px;width:80px;z-index:0;transition:all .6s}
+.FollowByEmail .follow-by-email-inner .follow-by-email-submit:hover {background:#df4840;border:0;box-shadow:none;border-radius:0;cursor:pointer}
+.tabletd1 {width:100%;}
+.tabletd2 {width:64px;}
+/* Arlina Ad Slot */
+.banner,.banner2 {margin:0 auto;text-align:center;overflow:hidden;}
+.banner .widget,.banner2 .widget {width:100%;max-width:100%;margin:0 auto;background:transparent;text-align:center;overflow:hidden;}
+.banner img, .banner iframe,.banner2 img, .banner2 iframe{display:block;margin:0 auto;text-align:center;}
+.kotak_iklan {margin:auto;transition:all 1s ease-out;}
+.kotak_iklan .sidebar .widget-content,.kotak_iklan .sidebar-two .widget-content{padding:0;border:0;}
+.kotak_iklan .sidebar .widget {margin-bottom:0;padding:0;}
+.kotak_iklan img{background:#fff;text-align:center;margin:5px 2.5px;padding:2.5px;border:1px solid #ddd!important;transition:all .6s ease-out}
+.kotak_iklan  img:hover {background:#fff;border-color:#bbb!important;}
+.kotak_iklan2 {text-align:center;margin:0 auto;transition:all 1s ease-out;}
+.kotak_iklan2 .sidebar .widget-content,.kotak_iklan2 .sidebar-two .widget-content{padding:0;background:#f2f6f7;box-shadow:0 1px 2px 0 rgba(0,0,0,0.1);border:0;}
+.kotak_iklan2 .sidebar .widget,.kotak_iklan2 .sidebar-two .widget {margin-bottom:0;padding:0;}
+.kotak_iklan2  img {text-align:center;transition:all 1s ease-out;}
+.kotak_iklan2  img:hover {transition:all .5s ease-out;}
+/* Arlina Global Responsive */
+@media screen and (max-width:800px) {
+#header {text-align:center}
+#navi-arlina{position:relative}
+#navi-arlina ul{background:#45a2db;position:absolute;top:100%;left:0;z-index:3;height:auto;display:none}
+#navi-arlina ul.menus{width:100%;position:static;padding-left:20px}
+#navi-arlina li{display:block;float:none;width:auto}
+#navi-arlina input,#navi-arlina label{position:absolute;top:0;right:0;display:block}
+#navi-arlina input{z-index:4}
+#navi-arlina input:checked + label{color:#fff }
+#navi-arlina input:checked ~ ul{display:block;width:100%}
+#navi-arlina li:hover > ul{width:100%}
+#navi-top{display:none;}
+}
+@media only screen and (max-width:768px) {
+#header{padding:25px 15px;}
+#header2 {float:none;max-width:100%;}
+#sidebar-wrapper,#main-wrapper {width:100%;padding:0;}
+.sidebar {padding:0 15px;}
+.menusearch{display:block;margin:15px 0;padding:0 15px}}
+@media only screen and (max-width:667px) {
+#footer-adwidget .footer-widget {width:31.2%;}}
+@media screen and (max-width:640px) {
+.post-info {display:none}
+.status-msg-border {width:97%}
+.post h2 {font-size:100%}
+#footer-wrapper{margin:auto;}
+#footer-adwidget {width:100%;overflow:hidden;}
+#footer-adwidget .footer-widget {width:94%;float:left;margin-left:10px;}
+.cpleft, #ftright {line-height:normal;}}
+@media screen and (max-width:480px) {
+.comments .comments-content .user{line-height:2.8em}
+.post h2{font-size:100%}
+.post h1{font-size:120%}
+body,.body-fauxcolumn-outer{font-size:80%}}
+@media screen and (max-width:380px) {
+.comments {display:none}}
+@media screen and (max-width:240px) {
+body,.body-fauxcolumn-outer {font-size:80%}}
+.status-msg-body {padding:10px 0;display:none}
+.status-msg-wrap{display:none;font-size:14px;margin-left:1px;width:100%;color:#666}
+.status-msg-wrap a{color:orange!important}
+.status-msg-bg{display:none;background:#ccc;position:relative;width:99%;padding:6px;z-index:1;border-radius:3px;border:2px #999 solid}
+.status-msg-border{display:none;border:0;position:relative;width:99%}
+</style>
+<style type="text/css">
+/* Arlina Post Area */
+.post-body img {background:#fdfdfd;height:auto;max-width:99%;margin-bottom:20px;opacity:1;padding:5px;box-shadow:0 0 0 1px #e0e0e0;transition:all .6s ease;}
+.post-body img:hover {opacity:0.95;}
+.post-body a.img,.post-body .separator a {margin-left:0!important;margin-right:0!important;}
+/* Arlina Comment Post */
+.comments{background:none repeat scroll 0 0 #fff;clear:both;margin:10px 0 0;padding:10px 0;width:100%;font-size:11px}
+#comments{overflow:hidden}
+#comments h4{display:inline;padding:10px;line-height:40px;font-size:14px;color:#fff}
+#comments h4,.comments .comment-header,.comments .comment-thread.inline-thread .comment{position:relative}
+#comments h4,.comments .continue a{background-color:#fd4646;font-weight:700;color:#fff}
+.comments .user a,.comments .continue a{font-size:12px;color:#333}
+.comments .continue a{font-size:12px;color:#fff}
+#comments h4:after{content:"";position:absolute;bottom:-10px;left:10px;border-top:10px solid #fd4646;border-right:20px solid transparent;width:0;height:0;line-height:0}
+.comments .avatar-image-container{float:left;width:42px;max-height:42px;height:42px;padding:2px;border:1px solid #ccc;border-radius:100%;transition:all .3s}
+.comments .avatar-image-container img{max-width:42px;width:100%;border-radius:100%;transition:all .3s}
+.comments .avatar-image-container:hover,.comments .avatar-image-container img:hover{border-radius:0}
+.comments .inline-thread .avatar-image-container{width:36px;height:36px}
+.comments .comment-block{font-size:13px;position:relative;margin-left:63px;padding:5px 10px;border:1px solid #ccc;border-radius:3px;line-height:normal;}
+.comments .inline-thread .comment-block{margin-left:56px;border:1px solid #ccc}
+.comments .comment-block::before,.comments .comment-block::after{content:"";width:0;height:0;border-width:10px 8px;border-style:solid;border-color:transparent #ccc transparent transparent;position:absolute;top:8px;right:100%}
+.comments .comment-block::after{border-color:transparent #fff transparent transparent;right:auto;left:-15px}
+.comments .comments-content .comment-header{border-bottom:1px solid #ccc;padding-bottom:3px;margin:-1px -3px 10px}
+.comments .comments-content .comment{margin-bottom:12px;padding:0}
+.comments .comments-content .icon.blog-author{position:absolute;right:10px;top:-4px;width:50px;height:20px;font-size:85%;font-weight:700;text-transform:uppercase;background-color:#fd4646}
+.comments .comments-content .icon.blog-author::after{content:"Admin";position:absolute;color:#fff;top:1px;left:6px;line-height:20px;}
+#comments-block{margin:1em 0 1.5em;line-height:1.6em }
+#comments-block .comment-author{margin:.5em 0}
+#comments-block .comment-body{margin:.25em 0 0}
+#comments-block .comment-footer{margin:-.25em 0 2em;line-height:1.4em;text-transform:uppercase;letter-spacing:.1em}
+#comments-block .comment-body p{margin:0 0 .75em}
+.deleted-comment{font-style:italic;color:#eee}
+.comment-replies {margin-left:7%;margin-top:10px;}
+span.comment-actions{position:relative;display:inline-block;font-size:11px}
+span.comment-actions a{margin-right:5px}
+.comments .continue a{background:transparent;font-size:12px;color:#333}
+cite.user.blog-author,cite.user{font-style:normal;font-weight:700;margin-right:5px}
+#comments h4#comment-post-message,span.thread-count {display:none;}
+#blog-pager{text-align:center}
+.comments-content {display:block;position:relative;margin-top:15px;}
+/* Arlina Related Post */
+#related_posts{margin-top:15px}
+#related_posts h4{color:#fff;background:#45a2db;padding:10px;margin:0 0 5px;font-size:120%;}
+#related_img{margin:0;padding:0;}
+#related_img:hover{background:0}
+#related_img ul{list-style-type:none;margin:0;padding:0}
+#related_img li{min-height:62px;border-bottom:1px solid #f1f1f1;list-style:none;margin:0 0 5px;padding:5px;}
+#related_img li a{color:#2672a0;}
+#related_img li a:hover{text-decoration:underline}
+#related_img .news-title{display:block;font-weight:bold!important;margin-bottom:5px;font-size:14px;}
+#related_img .news-text{display:block;text-align:justify;font-weight:normal;text-transform:none;color:#333;font-size:12px;}
+#related_img img{float:left;margin-right:7px;border:1px solid #ccc;padding:2px;width:60px;height:60px;max-width:100%;background:#fff}
+/* Arlina Share Button */
+h2.sharetitle{position:relative;overflow:hidden;margin:20px 0;font-size:120%;font-weight:700;padding:4px 8px;text-align:center;text-transform:uppercase;transition:all .5s ease-out}
+h2.sharetitle:before, h2.sharetitle:after {position:absolute;top:51%;overflow:hidden;width:50%;height:2px;content:'\a0';background-color:#ddd;}
+h2.sharetitle:before{margin-left:-50%;text-align:right;}
+h2.sharetitle span{position:relative;display:inline-block;padding:5px 10px;margin:0 10px;}
+.sharede,.sharebrow{position:relative;display:inline-block;}
+.sharebrow{display:table;margin:auto;text-align:center}
+.sharebrow a.fb,.sharebrow a.gp,.sharebrow a.tw,.sharebrow span.pl{text-decoration:none!important;display:inline-block;margin:0 5px 5px 0;font-weight:700;text-transform:uppercase;color:#fff;text-shadow:none;padding:2px 8px;opacity:1;transition:all .3s}
+.sharebrow a.gp {background:#f20000;}
+.sharebrow a.fb {background:#516ca4;}
+.sharebrow a.tw {background:#00baff;}
+.sharebrow span.pl {background:#ff6600;}
+.fbtea,.gotea,.plustea,.twtea{font-size:13px!important;vertical-align:middle}
+.sharebrow a.fb:hover,.sharebrow a.gp:hover,.sharebrow a.tw:hover,.sharebrow span.pl:hover{color:#fff;opacity:.9}
+.sharebrow a.fb:active,.sharebrow a.gp:active,.sharebrow a.tw:active,.sharebrow span.pl:active{box-shadow:inset 0 1px 0 rgba(0,0,0,.16)}
+span.pl{color:green;cursor:pointer}
+#share-menu{display:none}
+.dropdown-menu{position:absolute;top:100%;right:5px;z-index:99;float:left;min-width:100px;padding:5px 10px;margin:0;font-size:13px;text-align:left;list-style:none;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #ddd;border-radius:3px;}
+.dropdown-menu li{list-style:none!important;margin:0!important;padding-left:0!important;line-height:1.8em!important}
+.dropdown-menu li a{color:#333!important;font-weight:400;display:block}
+.dropdown-menu li a:hover{color:#e8554e!important}
+ul#share-menu{margin:10px 0;padding:5px 15px}
+/* Arlina Shortcodes */
+.button{float:left;list-style:none;text-align:center;width:95%;margin:10px;padding:2px;font-size:14px;clear:both;}
+.button ul {margin:0;padding:0}
+.button li{display:inline;margin:5px;padding:0;list-style:none;}
+.demo,.download {padding:8px 12px!important;color:#fff!important;font-weight:700;font-size:14px;font-family:'Open Sans',sans-serif;text-align:center;text-transform:uppercase;letter-spacing:0.5px;border-radius:3px;transition:all 0.3s ease-out;}
+.demo {background-color:#555;}
+.download {background-color:#fd554c;}
+.demo:hover {background-color:#444;color:#fff;}
+.download:hover {background-color:#df4840;color:#fff;}
+.first-letter{float:left;color:#f77c6a;font-size:75px;line-height:60px;padding-top:4px;padding-right:8px;padding-left:3px;font-family:Georgia}
+.alert-message{position:relative;display:block;background-color:#f7f8fa;padding:20px;margin:20px 0;border-radius:2px;color:#39484d;}
+.alert-message p{margin:0!important;padding:0;line-height:22px;font-size:13px;color:#39484d}
+.alert-message span{font-size:14px!important}
+.alert-message i{font-size:22px;text-align:left;display:inline-block;position:absolute;right:0;top:0;padding:20px;opacity:0.8;}
+.alert-message.success{background-color:#00acd6;color:#fff}
+.alert-message.success a,.alert-message.success span{color:#fff}
+.alert-message.alert{background-color:#0073b7;color:#fff}
+.alert-message.alert a,.alert-message.alert span{color:#fff}
+.alert-message.warning{background-color:#efa666;color:#fff}
+.alert-message.warning a,.alert-message.warning span{color:#fff}
+.alert-message.error{background-color:#f56c7e;color:#fff}
+.alert-message.error a,.alert-message.error span{color:#fff}
+.bagitiga {-webkit-column-count:3;-moz-column-count:3;column-count:3;}
+.bagitiga img{-webkit-backface-visibility:hidden;margin-bottom:15px;max-width:100%;}
+/* CSS Item Responsive */
+@media only screen and (max-width:960px){
+.bagitiga{-webkit-column-count:2;-moz-column-count:2;column-count:2;}}
+@media only screen and (max-width:640px){
+.bagitiga{-webkit-column-count:1;-moz-column-count:1;column-count:1;}}
+</style>
+<script type="text/javascript">/*<![CDATA[*/var relnum=0;var relmaxposts=5;var numchars=135;var morelink=" ";function saringtags(r,l){for(var e=r.split("<"),n=0;n<e.length;n++)-1!=e[n].indexOf(">")&&(e[n]=e[n].substring(e[n].indexOf(">")+1,e[n].length));return e=e.join(""),e=e.substring(0,l-1)}function relpostimgthum(r){for(var l=0;l<r.feed.entry.length;l++){var e=r.feed.entry[l];reljudul[relnum]=e.title.$t,postcontent="","content"in e?postcontent=e.content.$t:"summary"in e&&(postcontent=e.summary.$t),relcuplikan[relnum]=saringtags(postcontent,numchars),postimg="media$thumbnail"in e?e.media$thumbnail.url:"http://lh3.ggpht.com/_xcD4JK_dIjU/SnamIh0KTCI/AAAAAAAADMA/hLjqmEbdtkw/d/noimagethumb.gif",relgambar[relnum]=postimg;for(var n=0;n<e.link.length;n++)if("alternate"==e.link[n].rel){relurls[relnum]=e.link[n].href;break}relnum++}}function contains(r,l){for(var e=0;e<r.length;e++)if(r[e]==l)return!0;return!1}function relatpost(){for(var r=new Array(0),l=new Array(0),e=new Array(0),n=new Array(0),t=0;t<relurls.length;t++)contains(r,relurls[t])||(r.length+=1,r[r.length-1]=relurls[t],l.length+=1,l[l.length-1]=reljudul[t],e.length+=1,e[e.length-1]=relcuplikan[t],n.length+=1,n[n.length-1]=relgambar[t]);reljudul=l,relurls=r,relcuplikan=e,relgambar=n;for(var t=0;t<reljudul.length;t++){var a=Math.floor((reljudul.length-1)*Math.random()),u=reljudul[t],s=relurls[t],i=relcuplikan[t],o=relgambar[t];reljudul[t]=reljudul[a],relurls[t]=relurls[a],relcuplikan[t]=relcuplikan[a],relgambar[t]=relgambar[a],reljudul[a]=u,relurls[a]=s,relcuplikan[a]=i,relgambar[a]=o}for(var g,m=0,h=Math.floor((reljudul.length-1)*Math.random()),c=h,d=document.URL;m<relmaxposts&&(relurls[h]==d||(g="<li class='news-title clearfix'>",g+="<a href='"+relurls[h]+"' rel='nofollow' target='_top' title='"+reljudul[h]+"'><img src='"+relgambar[h]+"' /></a>",g+="<a href='"+relurls[h]+"' target='_top'>"+reljudul[h]+"</a>",g+="<span class='news-text'>"+relcuplikan[h]+" ... <a href='"+relurls[h]+"' target='_top'>"+morelink+"</a><span class='news-text'>",g+="</li>",document.write(g),m++,m!=relmaxposts))&&(h<reljudul.length-1?h++:h=0,h!=c););}var reljudul=new Array,relurls=new Array,relcuplikan=new Array,relgambar=new Array;/*]]>*/</script>
+<script type="text/javascript">
+//<![CDATA[
+//CSS Ready
+function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+loadCSS("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700");loadCSS("http://fonts.googleapis.com/css?family=Oswald:400,700");
+//]]>
+</script>
+<!-- custom script from nulis-ilmu.com -->
+<!--Syntax Highlighter-->
+<script src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/0B1LfQy5HpjRKUlZ3MFJYeUd2TlU.js" type="text/javascript"></script>
+<!--Google Analytics-->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55645497-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script><script type="text/javascript" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/jquery.js"></script><link rel="stylesheet" type="text/css" href="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/streamtestbadge.css"><script src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/sf_main.jsp"></script><script src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/e.htm" type="text/javascript" defer="defer"></script></head>
+<!-- <body><div></div> -->
+<body class="loading">
+<div>
+<div id="wrapper">
+<nav id="navi-top" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" style="">
+<input type="checkbox">
+<label>MENU</label>
+<div style="float:left;width:75%;">
+<ul>
+<li><a href="http://www.nulis-ilmu.com/p/tentang-kami.html" itemprop="url"><span itemprop="name">Tentang Kami</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/p/peta-situs.html" itemprop="url"><span itemprop="name">Peta Situs</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/p/privacy-policy.html" itemprop="url"><span itemprop="name">Privacy Policy</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/p/disclaimer.html" itemprop="url"><span itemprop="name">Disclaimer</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/p/kontak-kami.html" itemprop="url"><span itemprop="name">Kontak Kami</span></a></li>
+</ul>
+</div>
+<!-- DMCA BADGE -->
+<div style="float:right;">
+<a class="dmca-badge" href="http://www.dmca.com/Protection/Status.aspx?ID=01e415b7-bc14-4e93-b5fd-dc16c9d99f82" title="DMCA.com Protection Status">
+<img alt="DMCA.com Protection Status" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/dmca_protected_sml_120f.png"></a>
+<script async="async" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/streamtest.js" type="text/javascript"></script></div>
+</nav>
+<div id="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<div class="section" id="header2"><div class="widget Header" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<h2 class="title">
+<a href="http://www.nulis-ilmu.com/" itemprop="url" title="Nulis-ilmu">
+<span itemprop="name">Nulis-ilmu</span>
+</a>
+</h2>
+</div>
+<div class="descriptionwrapper">
+<p class="description"><span>Ikatlah Ilmu dengan Menuliskannya</span></p>
+</div>
+</div>
+</div></div>
+<div class="header-right section section" id="header-right"></div>
+</div>
+<div class="clear"></div>
+<nav id="navi-arlina" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+<input type="checkbox">
+<label>MENU</label>
+<ul>
+<li><a href="http://www.nulis-ilmu.com/">Home</a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20Android" itemprop="url"><span itemprop="name">Android</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20Blogging" itemprop="url"><span itemprop="name">Blogging</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20CSS" itemprop="url"><span itemprop="name">CSS</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20Elektronika" itemprop="url"><span itemprop="name">Elektronika</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20HTML" itemprop="url"><span itemprop="name">HTML</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20Internet" itemprop="url"><span itemprop="name">Internet</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20Javascript" itemprop="url"><span itemprop="name">JS</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20Komputer" itemprop="url"><span itemprop="name">Komputer</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20Mikrokontroler" itemprop="url"><span itemprop="name">Mikrokontroler</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20PHP" itemprop="url"><span itemprop="name">PHP</span></a></li>
+<li><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20Website" itemprop="url"><span itemprop="name">Website</span></a></li>
+</ul>
+</nav>
+<div class="clear"></div>
+<div id="content-wrapper" itemscope="itemscope" itemtype="http://schema.org/Blog" role="main">
+<div class="banner section section" id="banner"></div>
+<div id="main-wrapper">
+<div class="main section" id="main"><div class="widget Blog" id="Blog1">
+<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+<span class="breadhome" typeof="v:Breadcrumb"><a href="http://www.nulis-ilmu.com/" property="v:title" rel="v:url">Home</a> » </span>
+<span class="breadlabel" typeof="v:Breadcrumb"><a href="http://www.nulis-ilmu.com/search/label/Tutorial%20PHP" property="v:title" rel="v:url">Tutorial PHP</a> » </span>
+<span class="breadlabel">Cara Mengupload File Ke Server Dengan PHP</span>
+</div>
+<div class="blog-posts hfeed">
+
+                <div class="date-outer">
+              
+<h2 class="date-header"><span>Sunday, October 26, 2014</span></h2>
+
+                <div class="date-posts">
+              
+<div class="post-outer">
+<div class="post hentry">
+<h1 class="post-title entry-title">
+Cara Mengupload File Ke Server Dengan PHP
+</h1>
+<div class="post-header">
+<div class="post-header-line-1">
+<div class="post-info">
+<span class="author-info">
+<span class="vcard" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<span class="fn">
+<a data-gapiattached="true" data-onload="true" data-gapiscan="true" class="g-profile" href="https://plus.google.com/111895217112783348282" rel="author" title="author profile">
+<span itemprop="name">Eko Purnomo</span>
+</a>
+</span>
+</span>
+</span>
+<span class="post-timestamp">
+<meta content="http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" itemprop="url">
+<a class="timestamp-link" href="http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" rel="bookmark" title="permanent link"><abbr class="published updated" itemprop="datePublished" title="2014-10-26T07:16:00+07:00">10/26/2014</abbr></a>
+</span>
+<span class="label-info">
+<a class="label-block" href="http://www.nulis-ilmu.com/search/label/Tutorial%20PHP?max-results=6" rel="tag">
+Tutorial PHP</a>
+</span>
+</div>
+</div>
+</div>
+
+<div style="display:block;text-align:center;margin:15px auto;">
+
+</div>
+<div class="post-body entry-content" id="post-body-1679538332318373098">
+<p></p><div class="featured-image" style="clear: both; text-align: center;">
+<a href="http://3.bp.blogspot.com/-ezbJbYTTl5Y/VEw7YgH6eFI/AAAAAAAAAgA/kPlABz-12PY/s1600/cara-upload-file-dengan-php.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="cara upload file dengan php" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/cara-upload-file-dengan-php.png" title="" border="0" height="91" width="200"></a></div>
+Dengan PHP kita bisa mengupload file ke server. Sebelumnya perlu 
+diketahui bahwa dalam dunia website&nbsp;tidak semua informasi berupa 
+text tapi bisa juga berupa gambar, flash atau dokumen pdf.&nbsp;Untuk 
+itu kita&nbsp;membutuhkan sarana untuk mengupload file ke server.<br>
+<br>
+Sebetulnya kita bisa menggunakan aplikasi FTP client untuk menangani 
+proses upload file ini namun dengan mengupload file menggunakan PHP kita
+ bisa melakukan beberapa hal seperti manandai file dan mengaitkan file 
+kedalam database. Selain itu mengupload file lewat FTP hanya boleh 
+dilakukan oleh pemilik website, untuk pengguna bebas sebaiknya dibuatkan
+ sarana upload file dengan PHP saja.<br>
+<br>
+Untuk mengupload file ke server kita menggunakan form dengan input type 
+file dan lalu membuat script PHP untuk menanganinya. Dalam proses upload
+ file ke server kita bisa menggunakan beberapa atribut dari <a href="http://nulis-ilmu.blogspot.com/2014/10/mengenal-variabel-php-super-global.html">variabel super global</a> $_FILES berikut ini:
+<br><a name="more"></a>
+<ul>
+<li>$_FILES[‘file’][‘name’] , berisi nama asli dari file yang diupload</li>
+<li>$_FILES[‘file’][‘tmp_name’] , berisi nama temporary file yang diupload pada server</li>
+<li>$_FILES[‘file’][‘size’] , berisi ukuran file asli (dalam byte)</li>
+<li>$_FILES[‘file’][‘type’] , berisi MIME type file yang diupload</li>
+</ul>
+<h4>
+Berikut ini langkah-langkah membuat sistem upload file ke server dengan PHP</h4>
+<b>1. Pastikan parameter file_uploads pada file php.ini sudah diaktifkan.</b><br>
+Caranya buka file php.ini lalu cari teks file_uploads kemudian isi dengan nilai On seperti contoh berikut ini :<br>
+<br>
+<div style="background: #ffffff; border-width: .1em .1em .1em .8em; border: solid gray; overflow: auto; padding: .2em .6em; width: auto;">
+<pre style="line-height: 125%; margin: 0;">file_uploads = On
+</pre>
+</div>
+<br>
+<b>2. Buat direktori untuk menampung file yang di upload.</b><br>
+Pastikan direktori atau folder tempat file upload tersebut sudah diset permission 777 (Untuk web server Linux).<br>
+Caranya dengan mengetik perintah berikut pada terminal :<br>
+<br>
+<div style="background: #ffffff; border-width: .1em .1em .1em .8em; border: solid gray; overflow: auto; padding: .2em .6em; width: auto;">
+<pre style="line-height: 125%; margin: 0;">sudo chmod -R 777 nama_direktori
+</pre>
+</div>
+<br>
+<b>3. Buat form dengan input type file untuk pengguna memilih file yang akan diupload.</b><br>
+Contoh script form upload file:
+<br>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol class="dp-c"><li class="alt"><span><span>&lt;form&nbsp;enctype=</span><span class="string">"multipart/form-data"</span><span>&nbsp;action=</span><span class="string">""</span><span>&nbsp;method=</span><span class="string">"POST"</span><span>&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;Pilih&nbsp;file&nbsp;yang&nbsp;akan&nbsp;diupload:&lt;/br&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&lt;input&nbsp;name=<span class="string">"userfile"</span><span>&nbsp;type=</span><span class="string">"file"</span><span>&nbsp;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&lt;input&nbsp;type=<span class="string">"submit"</span><span>&nbsp;name=</span><span class="string">"enter"</span><span>&nbsp;value=</span><span class="string">"Upload"</span><span>&nbsp;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&lt;/form&gt;&nbsp;&nbsp;</span></li></ol></div><pre style="display: none;" class="php" name="code"> &lt;form enctype="multipart/form-data" action="" method="POST"&gt;  
+   Pilih file yang akan diupload:&lt;/br&gt;   
+   &lt;input name="userfile" type="file" /&gt;  
+   &lt;input type="submit" name="enter" value="Upload" /&gt;  
+ &lt;/form&gt;
+</pre>
+<br>
+<b>4. Sebaiknya lakukan urutan proses upload file sebagai berikut :</b><br>
+<ul>
+<li>Cek keberadaan file pada server, jika sudah ada maka proses upload dibatalkan.</li>
+<li>Buat batasan ukuran maksimal file yang diijinkan untuk diupload, jika melebihi batas maka proses upload dibatalkan.</li>
+<li>Batasi tipe file yang akan diupload demi keamanan, misal hanya file JPG, GIF dan PNG saja.</li>
+<li>Tampilkan status jika proses upload file berhasil atau gagal.</li>
+</ul>
+<b>5. Berikut script PHP lengkap untuk menangani urutan proses upload file diatas :
+</b><br>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol class="dp-c"><li class="alt"><span><span>&lt;html&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&lt;body&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&lt;form&nbsp;enctype=<span class="string">"multipart/form-data"</span><span>&nbsp;action=</span><span class="string">""</span><span>&nbsp;method=</span><span class="string">"POST"</span><span>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pilih&nbsp;file&nbsp;yang&nbsp;akan&nbsp;diupload:&lt;/br&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;name=<span class="string">"userfile"</span><span>&nbsp;type=</span><span class="string">"file"</span><span>&nbsp;/&gt;&nbsp;&lt;br&nbsp;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=<span class="string">"submit"</span><span>&nbsp;name=</span><span class="string">"enter"</span><span>&nbsp;value=</span><span class="string">"Upload"</span><span>&nbsp;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&lt;/form&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&lt;?php&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">if</span><span>(isset(</span><span class="vars">$_POST</span><span>[</span><span class="string">"enter"</span><span>]))&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//ambil&nbsp;parameter-parameter&nbsp;file&nbsp;yang&nbsp;diupload:&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="comment">//nama,&nbsp;nama&nbsp;temp,&nbsp;ukuran&nbsp;dan&nbsp;type&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="vars">$file_name</span><span>&nbsp;=&nbsp;</span><span class="vars">$_FILES</span><span>[</span><span class="string">"userfile"</span><span>][</span><span class="string">"name"</span><span>];&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="vars">$file_tmp_name</span><span>&nbsp;=&nbsp;</span><span class="vars">$_FILES</span><span>[</span><span class="string">"userfile"</span><span>][</span><span class="string">"tmp_name"</span><span>];&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="vars">$file_size</span><span>&nbsp;=&nbsp;</span><span class="vars">$_FILES</span><span>[</span><span class="string">"userfile"</span><span>][</span><span class="string">"size"</span><span>];&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="vars">$file_type</span><span>&nbsp;=&nbsp;</span><span class="vars">$_FILES</span><span>[</span><span class="string">"userfile"</span><span>][</span><span class="string">"type"</span><span>];&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//definisikan&nbsp;variabel&nbsp;untuk&nbsp;menangani&nbsp;error&nbsp;saat&nbsp;upload&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="vars">$err_upload</span><span>=0;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//pada&nbsp;contoh&nbsp;berikut&nbsp;file&nbsp;akan&nbsp;dipload&nbsp;ke&nbsp;direktori&nbsp;image&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="vars">$dir_upload</span><span>&nbsp;=&nbsp;</span><span class="string">"image/"</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//buat&nbsp;nama&nbsp;untuk&nbsp;file&nbsp;hasil&nbsp;upload&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="vars">$file_upload</span><span>&nbsp;=&nbsp;</span><span class="vars">$dir_upload</span><span>&nbsp;.&nbsp;</span><span class="func">basename</span><span>(</span><span class="vars">$file_name</span><span>);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//cek&nbsp;keberadaan&nbsp;file&nbsp;hasil&nbsp;upload&nbsp;di&nbsp;server&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">if</span><span>(</span><span class="func">file_exists</span><span>(</span><span class="vars">$file_upload</span><span>))&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"Maaf,&nbsp;File&nbsp;yang&nbsp;sama&nbsp;sudah&nbsp;ada&nbsp;pada&nbsp;server&nbsp;&lt;br&nbsp;/&gt;"</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$err_upload</span><span>=1;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//buat&nbsp;batasan&nbsp;maksimal&nbsp;ukuran&nbsp;file&nbsp;yang&nbsp;boleh&nbsp;diupload&nbsp;(dalam&nbsp;byte)&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="vars">$max_size_upload</span><span>=1000000;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//cek&nbsp;apakah&nbsp;ukuran&nbsp;file&nbsp;yang&nbsp;diupload&nbsp;melebihi&nbsp;batas&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">if</span><span>(</span><span class="vars">$file_size</span><span>&nbsp;&gt;&nbsp;</span><span class="vars">$max_size_upload</span><span>)&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"Maaf,&nbsp;Ukuran&nbsp;file&nbsp;yang&nbsp;diupload&nbsp;melebihi&nbsp;"</span><span>.</span><span class="vars">$max_size_upload</span><span>.</span><span class="string">"&nbsp;byte&nbsp;&lt;br&nbsp;/&gt;"</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$err_upload</span><span>=1;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//cek&nbsp;hanya&nbsp;type&nbsp;JPG,&nbsp;GIF&nbsp;dan&nbsp;PNG&nbsp;saja&nbsp;yang&nbsp;diijinkan&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">if</span><span>((</span><span class="vars">$file_type</span><span>!=</span><span class="string">"image/jpeg"</span><span>)&nbsp;&amp;&amp;&nbsp;(</span><span class="vars">$file_type</span><span>!=</span><span class="string">"image/gif"</span><span>)&nbsp;&amp;&amp;&nbsp;(</span><span class="vars">$file_type</span><span>!=</span><span class="string">"image/png"</span><span>))&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"Maaf,&nbsp;Hanya&nbsp;file&nbsp;JPG&nbsp;,&nbsp;GIF&nbsp;dan&nbsp;PNG&nbsp;saja&nbsp;yang&nbsp;diperbolehkan&nbsp;&lt;br&nbsp;/&gt;"</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$err_upload</span><span>=1;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">//tampilkan&nbsp;error&nbsp;jika&nbsp;terjadi&nbsp;kesalahan&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">if</span><span>(</span><span class="vars">$err_upload</span><span>)&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"Ada&nbsp;Error,&nbsp;proses&nbsp;upload&nbsp;file&nbsp;batal"</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span><span class="comment">//proses&nbsp;upload&nbsp;file&nbsp;jika&nbsp;semua&nbsp;benar&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">else</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>(move_uploaded_file(</span><span class="vars">$file_tmp_name</span><span>,</span><span class="vars">$file_upload</span><span>))&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"Proses&nbsp;upload&nbsp;berhasil"</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"Proses&nbsp;upload&nbsp;gagal"</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>?&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&lt;/body&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&lt;/html&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li></ol></div><pre style="display: none;" class="php" name="code"> &lt;html&gt;     
+ &lt;body&gt;   
+ &lt;form enctype="multipart/form-data" action="" method="POST"&gt;   
+      Pilih file yang akan diupload:&lt;/br&gt;    
+      &lt;input name="userfile" type="file" /&gt; &lt;br /&gt;   
+      &lt;input type="submit" name="enter" value="Upload" /&gt;   
+ &lt;/form&gt;  
+ &lt;?php  
+ if(isset($_POST["enter"]))  
+ {  
+ //ambil parameter-parameter file yang diupload:  
+ //nama, nama temp, ukuran dan type  
+ $file_name = $_FILES["userfile"]["name"];  
+ $file_tmp_name = $_FILES["userfile"]["tmp_name"];  
+ $file_size = $_FILES["userfile"]["size"];  
+ $file_type = $_FILES["userfile"]["type"];  
+ 
+ //definisikan variabel untuk menangani error saat upload  
+ $err_upload=0;  
+ 
+ //pada contoh berikut file akan dipload ke direktori image  
+ $dir_upload = "image/";  
+ 
+ //buat nama untuk file hasil upload  
+ $file_upload = $dir_upload . basename($file_name);  
+ 
+ //cek keberadaan file hasil upload di server  
+ if(file_exists($file_upload))  
+ {  
+      echo "Maaf, File yang sama sudah ada pada server &lt;br /&gt;";  
+      $err_upload=1;  
+ }  
+ 
+ //buat batasan maksimal ukuran file yang boleh diupload (dalam byte)  
+ $max_size_upload=1000000;   
+ 
+ //cek apakah ukuran file yang diupload melebihi batas  
+ if($file_size &gt; $max_size_upload)  
+ {  
+      echo "Maaf, Ukuran file yang diupload melebihi ".$max_size_upload." byte &lt;br /&gt;";  
+      $err_upload=1;  
+ }  
+ 
+ //cek hanya type JPG, GIF dan PNG saja yang diijinkan  
+ if(($file_type!="image/jpeg") &amp;&amp; ($file_type!="image/gif") &amp;&amp; ($file_type!="image/png"))  
+ {  
+      echo "Maaf, Hanya file JPG , GIF dan PNG saja yang diperbolehkan &lt;br /&gt;";  
+      $err_upload=1;  
+ }  
+ 
+ //tampilkan error jika terjadi kesalahan  
+ if($err_upload)  
+ {  
+      echo "Ada Error, proses upload file batal";  
+ }  
+ //proses upload file jika semua benar  
+ else  
+ {  
+      if(move_uploaded_file($file_tmp_name,$file_upload))  
+      {  
+           echo "Proses upload berhasil";  
+      }  
+      else  
+      {  
+           echo "Proses upload gagal";  
+      }       
+ }  
+ }  
+ ?&gt;  
+ &lt;/body&gt;     
+ &lt;/html&gt;   
+</pre>
+<b>6. Dan berikut tampilan proses upload file dengan php pada browser
+
+</b><br>
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://3.bp.blogspot.com/-8Iz9DDmdYS0/VEw7QqJuY2I/AAAAAAAAAf4/DzwMUSattxI/s1600/tampilan-upload-file-dengan-php.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="tampilan upload file dengan php" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/tampilan-upload-file-dengan-php.png" title="" border="0" height="215" width="320"></a></div>
+<br>
+Demikian cara dasar untuk upload file ke server dengan PHP. Sebetulnya 
+ada beberapa hal lain yang bisa dilakukan seperti mengecek type file 
+dengan fungsi finfo(), bukan dari ekstensinya lalu mengubah nama file 
+yang diupload agar lebih rapi dan aman. Untuk hal-hal tadi insyaAllah 
+akan ditulis pada artikel selanjutnya.<br>
+<br>
+Referensi :
+<br>
+<ul>
+<li><a href="http://php.net/manual/en/features.file-upload.post-method.php" rel="nofollow" target="_blank">http://php.net/manual/en/features.file-upload.post-method.php</a></li>
+<li><a href="http://www.w3schools.com/php/php_file_upload.asp" rel="nofollow" target="_blank">http://www.w3schools.com/php/php_file_upload.asp</a></li>
+</ul><p></p>
+<div style="clear: both;"></div>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<div style="display:block;text-align:center;margin:15px auto;">
+
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="http://www.nulis-ilmu.com/2014/10/membuat-dan-menghapus-direktori-dengan-php.html" id="Blog1_blog-pager-newer-link" title="Newer Post">Newer Post</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="http://www.nulis-ilmu.com/2014/10/cara-menulis-ke-dalam-file-dengan-php.html" id="Blog1_blog-pager-older-link" title="Older Post">Older Post</a>
+</span>
+<a class="home-link" href="http://www.nulis-ilmu.com/">Home</a>
+</div>
+<div class="clear"></div>
+<h2 class="sharetitle"><span>Share this</span></h2>
+<script type="text/javascript">
+//<![CDATA[
+var siteurl = window.location.href;
+  document.write('<div class="sharebrow"><div class="sharede"> \
+<a class="gp" href="https://plus.google.com/share?url=' + siteurl + '" target="_blank" title="Share to Google+">\
+    Google</a> \
+<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=' + siteurl + '" target="_blank" title="Share to Facebook">\
+    Facebook</a> \
+<a class="tw" href="https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title)+'&url='+siteurl+'" target="_blank" title="Share to Twitter">\
+    Twitter</a> \
+    <span class="pl" data-target="#share-menu">More</span> \
+<ul class="dropdown-menu" id="share-menu"> \
+    <li><a href="//www.digg.com/submit?url=' + siteurl + '" target="_blank" title="Share This On Digg">Digg</a></li> \
+    <li><a href="//www.linkedin.com/shareArticle?mini=true&amp;url=' + siteurl + '" target="_blank" title="Share This On Linkedin">Linkedin</a></li> \
+    <li><a href="//www.stumbleupon.com/submit?url=' + siteurl + '&amp;title='+encodeURIComponent(document.title)+'" target="_blank" title="Share This On Stumbleupon">Stumbleupon</a></li> \
+    <li><a href="//delicious.com/post?url=' + siteurl + '&amp;title='+encodeURIComponent(document.title)+'" target="_blank" title="Share This On Delicious">Delicious</a></li> \
+    <li><a href="http://www.tumblr.com/share/link?url=' + siteurl + '&name='+encodeURIComponent(document.title)+'&description='+encodeURIComponent(document.title)+'" target="_blank" title="Share This On Tumblr">Tumblr</a></li> \
+    <li><a href="http://bufferapp.com/add?text='+encodeURIComponent(document.title)+'&url=' + siteurl + '" target="_blank" title="Share This On BufferApp">BufferApp</a></li> \
+    <li><a href="https://getpocket.com/save?url=' + siteurl + '&title='+encodeURIComponent(document.title)+'" target="_blank" title="Share This On Pocket">Pocket</a></li> \
+    <li><a href="http://www.evernote.com/clip.action?url=' + siteurl + '&title='+encodeURIComponent(document.title)+'" target="_blank" title="Share This On Evernote">Evernote</a></li> \
+    </ul> \
+</div><div class="clear"></div></div> \
+');
+var button=document.querySelector(".pl");button.addEventListener("click",function(){var t=document.querySelector(button.getAttribute("data-target"));t.style.display="block"==t.style.display?"none":"block"});
+//]]>
+</script><div class="sharebrow"><div class="sharede"> <a class="gp" href="https://plus.google.com/share?url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" target="_blank" title="Share to Google+">    Google</a> <a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" target="_blank" title="Share to Facebook">    Facebook</a> <a class="tw" href="https://twitter.com/intent/tweet?text=Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu&amp;url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" target="_blank" title="Share to Twitter">    Twitter</a>     <span class="pl" data-target="#share-menu">More</span> <ul class="dropdown-menu" id="share-menu">     <li><a href="http://www.digg.com/submit?url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" target="_blank" title="Share This On Digg">Digg</a></li>     <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" target="_blank" title="Share This On Linkedin">Linkedin</a></li>     <li><a href="http://www.stumbleupon.com/submit?url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html&amp;title=Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu" target="_blank" title="Share This On Stumbleupon">Stumbleupon</a></li>     <li><a href="http://delicious.com/post?url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html&amp;title=Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu" target="_blank" title="Share This On Delicious">Delicious</a></li>     <li><a href="http://www.tumblr.com/share/link?url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html&amp;name=Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu&amp;description=Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu" target="_blank" title="Share This On Tumblr">Tumblr</a></li>     <li><a href="http://bufferapp.com/add?text=Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu&amp;url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html" target="_blank" title="Share This On BufferApp">BufferApp</a></li>     <li><a href="https://getpocket.com/save?url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html&amp;title=Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu" target="_blank" title="Share This On Pocket">Pocket</a></li>     <li><a href="http://www.evernote.com/clip.action?url=http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html&amp;title=Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu" target="_blank" title="Share This On Evernote">Evernote</a></li>     </ul> </div><div class="clear"></div></div> 
+<div style="clear:both;"></div>
+<div id="related_posts">
+<h4>Related Articles :</h4>
+<script src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/Tutorial%2520PHP" type="text/javascript"></script>
+<ul id="related_img">
+<script type="text/javascript">relatpost();</script><li class="news-title clearfix"><a href="http://www.nulis-ilmu.com/2014/11/tutorial-php-oop-part-10-membuat-autoloading-class.html" rel="nofollow" target="_top" title="Tutorial PHP OOP Part 10 : Membuat Autoloading Class"><img src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/membuat-autoloading-class.png"></a><a href="http://www.nulis-ilmu.com/2014/11/tutorial-php-oop-part-10-membuat-autoloading-class.html" target="_top">Tutorial PHP OOP Part 10 : Membuat Autoloading Class</a><span class="news-text">Autoloading
+ class adalah sebuah cara untuk memanggil sebuah class pada file lain 
+tanpa menggunakan fungsi include. Seperti telah dijel ... <a href="http://www.nulis-ilmu.com/2014/11/tutorial-php-oop-part-10-membuat-autoloading-class.html" target="_top"> </a><span class="news-text"></span></span></li><li class="news-title clearfix"><a href="http://www.nulis-ilmu.com/2014/11/membatasi-tampilan-tabel-mysql-dengan.html" rel="nofollow" target="_top" title="Membatasi Tampilan Tabel MySQL Dengan LIMIT"><img src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/sql-select-dengan-limit.png"></a><a href="http://www.nulis-ilmu.com/2014/11/membatasi-tampilan-tabel-mysql-dengan.html" target="_top">Membatasi Tampilan Tabel MySQL Dengan LIMIT</a><span class="news-text">Untuk
+ membatasi tampilan record dari tabel MySQL kita menggunakan parameter 
+LIMIT pada perintah SELECT. Parameter LIMIT ini nantinya b ... <a href="http://www.nulis-ilmu.com/2014/11/membatasi-tampilan-tabel-mysql-dengan.html" target="_top"> </a><span class="news-text"></span></span></li><li class="news-title clearfix"><a href="http://www.nulis-ilmu.com/2014/12/tutorial-php-oop-part-18-perulangan-object-dengan-interface-iterator.html" rel="nofollow" target="_top" title="Tutorial PHP OOP Part 18 : Perulangan Object Dengan Interface Iterator"><img src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/perulangan-object-dengan-interface-iterator.png"></a><a href="http://www.nulis-ilmu.com/2014/12/tutorial-php-oop-part-18-perulangan-object-dengan-interface-iterator.html" target="_top">Tutorial PHP OOP Part 18 : Perulangan Object Dengan Interface Iterator</a><span class="news-text">Perulangan
+ object atau dalam bahasa inggris disebut dengan object iteration adalah
+ sebuah perulangan dalam menampilkan properti yang a ... <a href="http://www.nulis-ilmu.com/2014/12/tutorial-php-oop-part-18-perulangan-object-dengan-interface-iterator.html" target="_top"> </a><span class="news-text"></span></span></li><li class="news-title clearfix"><a href="http://www.nulis-ilmu.com/2014/11/update-data-pada-tabel-mysql-dengan-php.html" rel="nofollow" target="_top" title="Update Data Pada Tabel MySQL Dengan PHP"><img src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/update-data-mysql.png"></a><a href="http://www.nulis-ilmu.com/2014/11/update-data-pada-tabel-mysql-dengan-php.html" target="_top">Update Data Pada Tabel MySQL Dengan PHP</a><span class="news-text">Untuk
+ meng-update data pada tabel MySQL kita menggunkan perintah query 
+UPDATE. Dalam melakukan update data kita harus menyertakan klau ... <a href="http://www.nulis-ilmu.com/2014/11/update-data-pada-tabel-mysql-dengan-php.html" target="_top"> </a><span class="news-text"></span></span></li><li class="news-title clearfix"><a href="http://www.nulis-ilmu.com/2014/12/tutorial-php-oop-part-26-serialisasi-object.html" rel="nofollow" target="_top" title="Tutorial PHP OOP Part 26 : Serialisasi Object"><img src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/serialisasi-object.png"></a><a href="http://www.nulis-ilmu.com/2014/12/tutorial-php-oop-part-26-serialisasi-object.html" target="_top">Tutorial PHP OOP Part 26 : Serialisasi Object</a><span class="news-text">Serialisasi
+ object adalah sebuah proses mengubah object menjadi byte stream yang di
+ representasikan dalam sebuah string. Proses serial ... <a href="http://www.nulis-ilmu.com/2014/12/tutorial-php-oop-part-26-serialisasi-object.html" target="_top"> </a><span class="news-text"></span></span></li>
+</ul>
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2" style="display:none;"></div>
+<div class="post-footer-line post-footer-line-3" style="display:none;"></div>
+</div>
+</div>
+<div class="comments" id="comments">
+<a name="comments"></a>
+<h4>
+4
+komentar:
+            
+</h4>
+<div class="comments-content">
+<script async="async" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/comments.js" type="text/javascript"></script>
+<script type="text/javascript">
+          (function() {
+            var items = [{'id': '6847994107296610697', 'body': 'Error Line 59\74br /\76\74br /\76Warning: move_uploaded_file(image/advan.jpg): failed to open stream: No such file or directory in C:\\xampp\\htdocs\\upload.php on line 59\74br /\76\74br /\76Warning: move_uploaded_file(): Unable to move \46#39;C:\\xampp\\tmp\\php2EBE.tmp\46#39; to \46#39;image/advan.jpg\46#39; in C:\\xampp\\htdocs\\upload.php on line 59\74br /\76Proses upload gagal', 'timestamp': '1442034196706', 'permalink': 'http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html?showComment\0751442034196706#c6847994107296610697', 'author': {'name': 'Muhammad Danny Rizkyanto', 'avatarUrl': 'http://2.bp.blogspot.com/-zt0wwdfqeSc/UX3ukOtaBlI/AAAAAAAAACo/atyOhC6lnKw/s35/100_4261.JPG', 'profileUrl': 'https://www.blogger.com/profile/08197000476470688222'}, 'displayTime': 'September 12, 2015 at 12:03 PM', 'deleteclass': 'item-control blog-admin pid-784278162'}, {'id': '8676948807203432871', 'body': 'Warning: move_uploaded_file(image/advan.jpg): failed to open stream: No such file or directory in C:\\xampp\\htdocs\\upload.php on line 59\74br /\76\74br /\76Warning: move_uploaded_file(): Unable to move \46#39;C:\\xampp\\tmp\\php2EBE.tmp\46#39; to \46#39;image/advan.jpg\46#39; in C:\\xampp\\htdocs\\upload.php on line 59\74br /\76Proses upload gagal', 'timestamp': '1442034534370', 'permalink': 'http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html?showComment\0751442034534370#c8676948807203432871', 'author': {'name': 'Muhammad Danny Rizkyanto', 'avatarUrl': 'http://2.bp.blogspot.com/-zt0wwdfqeSc/UX3ukOtaBlI/AAAAAAAAACo/atyOhC6lnKw/s35/100_4261.JPG', 'profileUrl': 'https://www.blogger.com/profile/08197000476470688222'}, 'displayTime': 'September 12, 2015 at 12:08 PM', 'deleteclass': 'item-control blog-admin pid-784278162'}, {'id': '2227639279702189331', 'parentId': '6847994107296610697', 'body': 'sama masalahnya :(', 'timestamp': '1447313960730', 'permalink': 'http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html?showComment\0751447313960730#c2227639279702189331', 'author': {'name': 'Ahmad Thoyib', 'avatarUrl': '//lh5.googleusercontent.com/-qfv2exYt_zI/AAAAAAAAAAI/AAAAAAAAABQ/OsMMNzNM6FQ/s35-c/photo.jpg', 'profileUrl': 'https://www.blogger.com/profile/14058627777962778218'}, 'displayTime': 'November 12, 2015 at 2:39 PM', 'deleteclass': 'item-control blog-admin pid-1572702993'}, {'id': '5225184942797807886', 'parentId': '6847994107296610697', 'body': 'harus buat folder dulu gan, misal nama folder di atas \46quot;image\46quot;, lokasi hrus sama dgn file php nya, smoga mmbantu', 'timestamp': '1447364159284', 'permalink': 'http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html?showComment\0751447364159284#c5225184942797807886', 'author': {'name': 'ettu kuttu', 'avatarUrl': '//lh4.googleusercontent.com/-SWgnsuvziNU/AAAAAAAAAAI/AAAAAAAAABc/nKF86gbvnKE/s35-c/photo.jpg', 'profileUrl': 'https://www.blogger.com/profile/10239220189004466947'}, 'displayTime': 'November 13, 2015 at 4:35 AM', 'deleteclass': 'item-control blog-admin pid-1267094533'}];
+            var msgs = {'loadMore': 'Load more...', 'loading': 'Loading...', 'loaded': 'No more!', 'addComment': 'Add comment', 'reply': 'Reply', 'delete': 'Delete'};
+            var config = {'blogId': '597297783102083591', 'postId': '1679538332318373098', 'feed': 'http://www.nulis-ilmu.com/feeds/1679538332318373098/comments/default', 'authorName': 'Eko Purnomo', 'authorUrl': 'https://www.blogger.com/profile/12972981929482191111', 'baseUri': 'https://www.blogger.com', 'maxThreadDepth': 2};
+      // <![CDATA[
+            var cursor = null;
+            if (items && items.length > 0) {
+              cursor = parseInt(items[items.length - 1].timestamp) + 1;
+            }
+            var bodyFromEntry = function(entry) {
+              if (entry.gd$extendedProperty) {
+                for (var k in entry.gd$extendedProperty) {
+                  if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
+                    return '<span class="deleted-comment">' + entry.content.$t + '</span>';
+                  }
+                }
+              }
+              return entry.content.$t;
+            }
+            var parse = function(data) {
+              cursor = null;
+              var comments = [];
+              if (data && data.feed && data.feed.entry) {
+                for (var i = 0, entry; entry = data.feed.entry[i]; i++) {
+                  var comment = {};
+                  // comment ID, parsed out of the original id format
+                  var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
+                  comment.id = id ? id[2] : null;
+                  comment.body = bodyFromEntry(entry);
+                  comment.timestamp = Date.parse(entry.published.$t) + '';
+                  if (entry.author && entry.author.constructor === Array) {
+                    var auth = entry.author[0];
+                    if (auth) {
+                      comment.author = {
+                        name: (auth.name ? auth.name.$t : undefined),
+                        profileUrl: (auth.uri ? auth.uri.$t : undefined),
+                        avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
+                      };
+                    }
+                  }
+                  if (entry.link) {
+                    if (entry.link[2]) {
+                      comment.link = comment.permalink = entry.link[2].href;
+                    }
+                    if (entry.link[3]) {
+                      var pid = /.*comments\/default\/(\d+)\?.*/.exec(entry.link[3].href);
+                      if (pid && pid[1]) {
+                        comment.parentId = pid[1];
+                      }
+                    }
+                  }
+                  comment.deleteclass = 'item-control blog-admin';
+                  if (entry.gd$extendedProperty) {
+                    for (var k in entry.gd$extendedProperty) {
+                      if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
+                        comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
+                      }
+                    }
+                  }
+                  comments.push(comment);
+                }
+              }
+              return comments;
+            };
+            var paginator = function(callback) {
+              if (hasMore()) {
+                var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+                if (cursor) {
+                  url += '&published-min=' + new Date(cursor).toISOString();
+                }
+                window.bloggercomments = function(data) {
+                  var parsed = parse(data);
+                  cursor = parsed.length < 50 ? null
+                      : parseInt(parsed[parsed.length - 1].timestamp) + 1
+                  callback(parsed);
+                  window.bloggercomments = null;
+                }
+                url += '&callback=bloggercomments';
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = url;
+                document.getElementsByTagName('head')[0].appendChild(script);
+              }
+            };
+            var hasMore = function() {
+              return !!cursor;
+            };
+            var getMeta = function(key, comment) {
+              if ('iswriter' == key) {
+                var matches = !!comment.author
+                    && comment.author.name == config.authorName
+                    && comment.author.profileUrl == config.authorUrl;
+                return matches ? 'true' : '';
+              } else if ('deletelink' == key) {
+                return config.baseUri + '/delete-comment.g?blogID='
+                     + config.blogId + '&postID=' + comment.id;
+              } else if ('deleteclass' == key) {
+                return comment.deleteclass;
+              }
+              return '';
+            };
+            var replybox = null;
+            var replyUrlParts = null;
+            var replyParent = undefined;
+            var onReply = function(commentId, domId) {
+              if (replybox == null) {
+                // lazily cache replybox, and adjust to suit this style:
+                replybox = document.getElementById('comment-editor');
+                if (replybox != null) {
+                  replybox.height = '250px';
+                  replybox.style.display = 'block';
+                  replyUrlParts = replybox.src.split('#');
+                }
+              }
+              if (replybox && (commentId !== replyParent)) {
+                document.getElementById(domId).insertBefore(replybox, null);
+                replybox.src = replyUrlParts[0]
+                    + (commentId ? '&parentID=' + commentId : '')
+                    + '#' + replyUrlParts[1];
+                replyParent = commentId;
+              }
+            };
+
+            var hash = (window.location.hash || '#').substring(1);
+            var startThread, targetComment;
+            if (/^comment-form_/.test(hash)) {
+              startThread = hash.substring('comment-form_'.length);
+            } else if (/^c[0-9]+$/.test(hash)) {
+              targetComment = hash.substring(1);
+            }
+
+            // Configure commenting API:
+            var configJso = {
+              'maxDepth': config.maxThreadDepth
+            };
+            var provider = {
+              'id': config.postId,
+              'data': items,
+              'loadNext': paginator,
+              'hasMore': hasMore,
+              'getMeta': getMeta,
+              'onReply': onReply,
+              'rendered': true,
+              'initComment': targetComment,
+              'initReplyThread': startThread,
+              'config': configJso,
+              'messages': msgs
+            };
+
+            var render = function() {
+              if (window.goog && window.goog.comments) {
+                var holder = document.getElementById('comment-holder');
+                window.goog.comments.render(holder, provider);
+              }
+            };
+
+            // render now, or queue to render when library loads:
+            if (window.goog && window.goog.comments) {
+              render();
+            } else {
+              window.goog = window.goog || {};
+              window.goog.comments = window.goog.comments || {};
+              window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
+              window.goog.comments.loadQueue.push(render);
+            }
+          })();
+      // ]]>
+</script>
+<div id="comment-holder">
+
+<div id="bc_0_5C" kind="c"><div id="bc_0_5CT"><div id="bc_0_4T" class="comment-thread" kind="r" t="0" u="0"><ol id="bc_0_4TB"><li id="bc_0_2B" class="comment" kind="b"><div class="avatar-image-container"><img src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/100_4261.JPG"></div><div id="c6847994107296610697" class="comment-block"><div id="bc_0_2M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/08197000476470688222">Muhammad Danny Rizkyanto</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html?showComment=1442034196706#c6847994107296610697">September 12, 2015 at 12:03 PM</a></span></div><p id="bc_0_2MC" class="comment-content">Error Line 59<br><br>Warning:
+ move_uploaded_file(image/advan.jpg): failed to open stream: No such 
+file or directory in C:\xampp\htdocs\upload.php on line 59<br><br>Warning:
+ move_uploaded_file(): Unable to move 'C:\xampp\tmp\php2EBE.tmp' to 
+'image/advan.jpg' in C:\xampp\htdocs\upload.php on line 59<br>Proses upload gagal</p><span id="bc_0_2MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-784278162"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=597297783102083591&amp;postID=6847994107296610697">Delete</a></span></span></div><div id="bc_0_2BR" class="comment-replies"><span id="bc_0_2b+seedFY0ED" kind="d"><div id="bc_0_0T" class="comment-thread inline-thread" kind="t" t="0" u="0"><span id="bc_0_0TT" class="thread-toggle thread-expanded" kind="g"><span id="bc_0_0TA" class="thread-arrow"></span><span id="bc_0_0TN" class="thread-count"><span id="bc_0_0TNT" style="display: none;"></span><span id="bc_0_0TNU" style="display: none;"></span><a href="javascript:;" target="_self">Replies</a><div id="bc_0_0TD" class="thread-dropContainer thread-expanded"><span class="thread-drop"></span></div></span></span><ol id="bc_0_0TC" class="thread-chrome thread-expanded"><div><li id="bc_0_0B" class="comment" kind="b"><div class="avatar-image-container"><img src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/photo.jpg"></div><div id="c2227639279702189331" class="comment-block"><div id="bc_0_0M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/14058627777962778218">Ahmad Thoyib</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html?showComment=1447313960730#c2227639279702189331">November 12, 2015 at 2:39 PM</a></span></div><p id="bc_0_0MC" class="comment-content">sama masalahnya :(</p><span id="bc_0_0MN" class="comment-actions secondary-text" kind="m"><span class="item-control blog-admin pid-1572702993"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=597297783102083591&amp;postID=2227639279702189331">Delete</a></span></span></div><div id="bc_0_0BR" class="comment-replies"></div><div id="bc_0_0B_box" class="comment-replybox-single"></div></li><li id="bc_0_1B" class="comment" kind="b"><div class="avatar-image-container"><img src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/photo_002.jpg"></div><div id="c5225184942797807886" class="comment-block"><div id="bc_0_1M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/10239220189004466947">ettu kuttu</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html?showComment=1447364159284#c5225184942797807886">November 13, 2015 at 4:35 AM</a></span></div><p id="bc_0_1MC" class="comment-content">harus buat folder dulu gan, misal nama folder di atas "image", lokasi hrus sama dgn file php nya, smoga mmbantu</p><span id="bc_0_1MN" class="comment-actions secondary-text" kind="m"><span class="item-control blog-admin pid-1267094533"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=597297783102083591&amp;postID=5225184942797807886">Delete</a></span></span></div><div id="bc_0_1BR" class="comment-replies"></div><div id="bc_0_1B_box" class="comment-replybox-single"></div></li></div><div id="bc_0_0I" class="continue" kind="ci"><a href="javascript:;" target="_self">Reply</a></div></ol><div id="bc_0_0T_box" class="comment-replybox-thread"></div></div></span></div><div id="bc_0_2B_box" class="comment-replybox-single"></div></li><li id="bc_0_3B" class="comment" kind="b"><div class="avatar-image-container"><img src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/100_4261.JPG"></div><div id="c8676948807203432871" class="comment-block"><div id="bc_0_3M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/08197000476470688222">Muhammad Danny Rizkyanto</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html?showComment=1442034534370#c8676948807203432871">September 12, 2015 at 12:08 PM</a></span></div><p id="bc_0_3MC" class="comment-content">Warning:
+ move_uploaded_file(image/advan.jpg): failed to open stream: No such 
+file or directory in C:\xampp\htdocs\upload.php on line 59<br><br>Warning:
+ move_uploaded_file(): Unable to move 'C:\xampp\tmp\php2EBE.tmp' to 
+'image/advan.jpg' in C:\xampp\htdocs\upload.php on line 59<br>Proses upload gagal</p><span id="bc_0_3MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-784278162"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=597297783102083591&amp;postID=8676948807203432871">Delete</a></span></span></div><div id="bc_0_3BR" class="comment-replies"></div><div id="bc_0_3B_box" class="comment-replybox-single"></div></li></ol><div style="display: none;" id="bc_0_4I" class="continue" kind="ci"><a href="javascript:;" target="_self">Add comment</a></div><div id="bc_0_4T_box" class="comment-replybox-thread"><iframe src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/comment-iframe.htm" class="blogger-iframe-colorize blogger-comment-from-post" id="comment-editor" name="comment-editor" style="display: block;width: 100%;" height="277px"></iframe></div><div id="bc_0_4L" class="loadmore loaded" kind="rb"><a href="javascript:;" target="_self">Load more...</a></div></div></div></div></div>
+</div>
+<p class="comment-footer">
+</p><div class="comment-form">
+<a name="comment-form"></a>
+<p>
+</p>
+<a href="http://www.blogger.com/comment-iframe.g?blogID=597297783102083591&amp;postID=1679538332318373098&amp;blogspotRpcToken=2563149" id="comment-editor-src"></a>
+
+<script type="text/javascript" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/2443413180-comment_from_post_iframe.js"></script>
+<script type="text/javascript">
+            BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html', '15892476476977844567');
+          </script>
+</div>
+<p></p>
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container">
+</div>
+</div>
+</div>
+</div>
+
+              </div></div>
+            
+</div>
+<div class="post-feeds">
+<div class="feed-links">
+Subscribe to:
+<a class="feed-link" href="http://www.nulis-ilmu.com/feeds/1679538332318373098/comments/default" target="_blank" type="application/atom+xml">Post Comments (Atom)</a>
+</div>
+</div>
+<script type="text/javascript">window.___gcfg = {'lang': 'en'};</script>
+</div></div>
+</div>
+<div id="sidebar-wrapper" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<div class="menusearch">
+<form action="/search" class="searchform" method="get">
+<input class="searchfield" id="q" name="q" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value=''" value="Type and enter to search..." type="text">
+</form>
+</div>
+<div class="sidebar section" id="sidebar"><div class="widget PageList" id="PageList1">
+<h2>INDEKS ARTIKEL</h2>
+<div class="widget-content">
+<ul>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-elektronika-dasar.html">Tutorial Elektronika Dasar</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-membuat-blog-pemula.html">Tutorial Membuat Blog Pemula</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-membuat-website-pemula.html">Tutorial Membuat Website Dasar</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-html-dasar.html">Tutorial HTML Dasar</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-css-dasar.html">Tutorial CSS Dasar</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-javascript-dasar.html">Tutorial Javascript Dasar</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-php-dasar.html">Tutorial PHP Dasar</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-php-lanjut.html">Tutorial PHP Lanjutan</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-php-form.html">Tutorial PHP Form</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-php-dan-mysql.html">Tutorial PHP dan MySQL</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-php-oop.html">Tutorial PHP OOP Dasar</a></li>
+<li><a href="http://www.nulis-ilmu.com/p/tutorial-pengguna-android-pemula.html">Tutorial Pengguna Android Pemula</a></li>
+</ul>
+</div>
+</div><div class="widget PopularPosts" id="PopularPosts1">
+<h2>Most Popular</h2>
+<div class="widget-content popular-posts">
+<ul>
+<li>
+<a href="http://www.nulis-ilmu.com/2015/08/penyearah-setengah-gelombang.html">Penyearah Setengah Gelombang</a>
+</li>
+<li>
+<a href="http://www.nulis-ilmu.com/2014/10/cara-menggunakan-combo-box-select-pada.html">Cara Menggunakan Combo Box Select Pada PHP</a>
+</li>
+<li>
+<a href="http://www.nulis-ilmu.com/2015/05/pengertian-arus-listrik.html">Pengertian Arus Listrik</a>
+</li>
+<li>
+<a href="http://www.nulis-ilmu.com/2015/03/cara-screenshot-beberapa-hp-android.html">Cara Screenshot Beberapa HP Android</a>
+</li>
+<li>
+<a href="http://www.nulis-ilmu.com/2014/09/cara-instal-web-server-di-linux.html">Cara Instal Web Server di Linux</a>
+</li>
+<li>
+<a href="http://www.nulis-ilmu.com/2015/04/pengaturan-koneksi-data-seluler-pada-android.html">Pengaturan Koneksi Data Seluler Pada Android</a>
+</li>
+<li>
+<a href="http://www.nulis-ilmu.com/2014/10/cara-menggunakan-input-checkbox-pada-php.html">Cara Menggunakan Input Checkbox Pada PHP</a>
+</li>
+<li>
+<a href="http://www.nulis-ilmu.com/2015/05/pengertian-hambatan-listrik.html">Pengertian Hambatan Listrik</a>
+</li>
+<li>
+<a href="http://www.nulis-ilmu.com/2015/08/penyearah-gelombang-penuh.html">Penyearah Gelombang Penuh</a>
+</li>
+<li>
+<a href="http://www.nulis-ilmu.com/2014/10/mengenal-session-pada-php-dan-cara-menggunakannya.html">Mengenal Session Pada PHP dan Cara Menggunakannya</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="widget HTML" id="HTML1">
+<div class="widget-content">
+<script async="" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/adsbygoogle.js"></script>
+<!-- nulis-ilmu_sidebar1_AdSense1_300x250_as -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-8160817978930537" data-ad-slot="4161277000"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="250" width="300"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=597297783102083591&amp;widgetType=HTML&amp;widgetId=HTML1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target="configHTML1" title="Edit">
+<img alt="" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget ContactForm" id="ContactForm1">
+</div>
+</div>
+</div>
+<div class="clear">&nbsp;</div>
+</div>
+<div class="clear"></div>
+<div class="banner2 section section" id="banner2"></div>
+</div>
+<div class="clear"></div>
+<footer id="footer-wrapper" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="footer">
+<div id="footer-adwidget">
+<div class="footer-widget" id="footx1">
+<div class="footer section" id="footer1"></div>
+</div>
+<div class="footer-widget" id="footx2">
+<div class="footer section" id="footer2"></div>
+</div>
+<div class="footer-widget" id="footx3">
+<div class="footer section" id="footer3"></div>
+</div>
+</div>
+</div>
+<div id="footer-last">
+<div class="cpleft">
+Copyright © 2014 - 2015 <a href="http://www.nulis-ilmu.com/" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name">Nulis-ilmu</span></a> All Right Reserved
+</div>
+<div id="ftright">
+Template by <a href="http://www.arlinadzgn.com/" target="_blank" title="Arlina Design">Arlina Design</a>
+</div>
+</div>
+</footer>
+</div>
+<script language="javascript">
+      dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+<!-- Histats.com START (hidden counter)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script><script src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/js15.js" type="text/javascript"></script>
+<a href="http://www.histats.com/" target="_blank" title="counter statistics"><script type="text/javascript">
+try {Histats.start(1,2792409,4,0,0,0,"");
+Histats.track_hits();} catch(err){};
+</script><script type="text/javascript" language="JavaScript" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/0.htm"><\/script>');
+</script>
+</a>
+<noscript><a href='http://www.histats.com' target='_blank'><img alt='counter statistics' border='0' src='http://sstatic1.histats.com/0.gif?2792409&101'/></a></noscript>
+<!-- Histats.com END -->
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/2759014865-widgets.js"></script>
+<script gapi_processed="true" type="text/javascript" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/plusone.js"></script>
+<script type="text/javascript">
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '597297783102083591';BLOG_attachCsiOnload('item_'); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d597297783102083591','//www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html','597297783102083591');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '597297783102083591', 'bloggerUrl': 'https://www.blogger.com', 'title': 'Nulis-ilmu', 'pageType': 'item', 'postId': '1679538332318373098', 'url': 'http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html', 'canonicalUrl': 'http://www.nulis-ilmu.com/2014/10/cara-mengupload-file-ke-server-dengan-php.html', 'homepageUrl': 'http://www.nulis-ilmu.com/', 'canonicalHomepageUrl': 'http://www.nulis-ilmu.com/', 'blogspotFaviconUrl': 'http://www.nulis-ilmu.com/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': 'UA-55645497-1', 'useUniversalAnalytics': false, 'searchLabel': '', 'searchQuery': '', 'pageName': 'Cara Mengupload File Ke Server Dengan PHP', 'pageTitle': 'Nulis-ilmu: Cara Mengupload File Ke Server Dengan PHP', 'metaDescription': '', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Nulis-ilmu - Atom\42 href\75\42http://www.nulis-ilmu.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Nulis-ilmu - RSS\42 href\75\42http://www.nulis-ilmu.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Nulis-ilmu - Atom\42 href\75\42https://www.blogger.com/feeds/597297783102083591/posts/default\42 /\76\n\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Nulis-ilmu - Atom\42 href\75\42http://www.nulis-ilmu.com/feeds/1679538332318373098/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'postImageThumbnailUrl': 'http://3.bp.blogspot.com/-ezbJbYTTl5Y/VEw7YgH6eFI/AAAAAAAAAgA/kPlABz-12PY/s72-c/cara-upload-file-dengan-php.png', 'postImageUrl': 'http://3.bp.blogspot.com/-ezbJbYTTl5Y/VEw7YgH6eFI/AAAAAAAAAgA/kPlABz-12PY/s1600/cara-upload-file-dengan-php.png', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { (function(){function c(a){this.t\75{};this.tick\75function(a,c,b){var d\75void 0!\75b?b:(new Date).getTime();this.t[a]\75[d,c];if(void 0\75\75b)try{window.console.timeStamp(\42CSI/\42+a)}catch(e){}};this.tick(\42start\42,null,a)}var a;window.performance\46\46(a\75window.performance.timing);var h\75a?new c(a.responseStart):new c;window.jstiming\75{Timer:c,load:h};if(a){var b\75a.navigationStart,e\75a.responseStart;0\74b\46\46e\76\75b\46\46(window.jstiming.srt\75e-b)}if(a){var d\75window.jstiming.load;0\74b\46\46e\76\75b\46\46(d.tick(\42_wtsrt\42,void 0,b),d.tick(\42wtsrt_\42,\n\42_wtsrt\42,e),d.tick(\42tbsd_\42,\42wtsrt_\42))}try{a\75null,window.chrome\46\46window.chrome.csi\46\46(a\75Math.floor(window.chrome.csi().pageT),d\46\0460\74b\46\46(d.tick(\42_tbnd\42,void 0,window.chrome.csi().startE),d.tick(\42tbnd_\42,\42_tbnd\42,b))),null\75\75a\46\46window.gtbExternal\46\46(a\75window.gtbExternal.pageT()),null\75\75a\46\46window.external\46\46(a\75window.external.pageT,d\46\0460\74b\46\46(d.tick(\42_tbnd\42,void 0,window.external.startE),d.tick(\42tbnd_\42,\42_tbnd\42,b))),a\46\46(window.jstiming.pt\75a)}catch(k){}})();window.tickAboveFold\75function(c){var a\0750;if(c.offsetParent){do a+\75c.offsetTop;while(c\75c.offsetParent)}c\75a;750\76\75c\46\46window.jstiming.load.tick(\42aft\42)};var f\75!1;function g(){f||(f\75!0,window.jstiming.load.tick(\42firstScrollTime\42))}window.addEventListener?window.addEventListener(\42scroll\42,g,!1):window.attachEvent(\42onscroll\42,g);\n })();\74/script\076', 'mobileHeadScript': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/6bcb658d650b6212', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sf': 'n', 'tf': ''}}, {'name': 'messages', 'data': {'deleteBacklink': 'Delete Backlink', 'deleteComment': 'Delete Comment', 'keepReading': 'Keep reading', 'newer': 'Newer', 'newest': 'Newest', 'noTitle': 'No title', 'older': 'Older', 'oldest': 'Oldest', 'popularPosts': 'Popular Posts', 'popularPostsFromThisBlog': 'Popular posts from this blog', 'postAComment': 'Post a Comment', 'share': 'Share', 'showAll': 'Show all', 'subscribe': 'Subscribe', 'subscribeToThisBlog': 'Subscribe to this blog', 'onlyTeamMembersCanComment': 'Note: Only a member of this blog may post a comment.'}}, {'name': 'skin', 'data': {'vars': {}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header2', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'sidebar', null, document.getElementById('PageList1'), {'title': 'INDEKS ARTIKEL', 'links': [{'href': 'http://www.nulis-ilmu.com/p/tutorial-elektronika-dasar.html', 'title': 'Tutorial Elektronika Dasar', 'isCurrentPage': false, 'id': '2314527844031364069'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-membuat-blog-pemula.html', 'title': 'Tutorial Membuat Blog Pemula', 'isCurrentPage': false, 'id': '6942778236139536756'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-membuat-website-pemula.html', 'title': 'Tutorial Membuat Website Dasar', 'isCurrentPage': false, 'id': '7509573126406852330'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-html-dasar.html', 'title': 'Tutorial HTML Dasar', 'isCurrentPage': false, 'id': '374584392477103730'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-css-dasar.html', 'title': 'Tutorial CSS Dasar', 'isCurrentPage': false, 'id': '5478214213865499995'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-javascript-dasar.html', 'title': 'Tutorial Javascript Dasar', 'isCurrentPage': false, 'id': '1174240332554472034'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-php-dasar.html', 'title': 'Tutorial PHP Dasar', 'isCurrentPage': false, 'id': '6527934062755568572'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-php-lanjut.html', 'title': 'Tutorial PHP Lanjutan', 'isCurrentPage': false, 'id': '2988801674271411208'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-php-form.html', 'title': 'Tutorial PHP Form', 'isCurrentPage': false, 'id': '6547379671906397168'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-php-dan-mysql.html', 'title': 'Tutorial PHP dan MySQL', 'isCurrentPage': false, 'id': '3753590030255414020'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-php-oop.html', 'title': 'Tutorial PHP OOP Dasar', 'isCurrentPage': false, 'id': '7754870444191360775'}, {'href': 'http://www.nulis-ilmu.com/p/tutorial-pengguna-android-pemula.html', 'title': 'Tutorial Pengguna Android Pemula', 'isCurrentPage': false, 'id': '5302098725133378497'}], 'mobile': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebar', null, document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ContactFormView', new _WidgetInfo('ContactForm1', 'sidebar', null, document.getElementById('ContactForm1'), {'contactFormMessageSendingMsg': 'Sending...', 'contactFormMessageSentMsg': 'Your message has been sent.', 'contactFormMessageNotSentMsg': 'Message could not be sent. Please try again later.', 'contactFormInvalidEmailMsg': 'A valid email address is required.', 'contactFormEmptyMessageMsg': 'Message field cannot be empty.', 'title': 'Contact Form', 'blogId': '597297783102083591', 'contactFormNameMsg': 'Name', 'contactFormEmailMsg': 'Email', 'contactFormMessageMsg': 'Message', 'contactFormSendMsg': 'Send', 'submitUrl': 'https://www.blogger.com/contact-form.do'}, 'displayModeFull'));
+</script>
+
+<div id="StreamTestVideoList"><a><button id="StreamTestClose">x</button></a><div id="STVLHeader"><img class="STVL_logo" src="Cara%20Mengupload%20File%20Ke%20Server%20Dengan%20PHP%20-%20Nulis-ilmu_files/streamtestlogowhite.png"><br><br><div id="STVLhd"><span>We have detected the following streams on this page, which one would you like to test?</span><br></div></div><div id="STVLBody"><p>No Videos Found.</p></div><div id="STVLFooter">© StreamTest.net All Rights Reserved</div></div><div id="StreamTestBackground"></div></body></html>

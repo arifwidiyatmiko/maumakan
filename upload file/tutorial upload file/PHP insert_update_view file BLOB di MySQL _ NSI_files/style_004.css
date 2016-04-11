@@ -1,0 +1,54 @@
+/*
+	Theme Name: Hueman Child
+	Theme URI: http://alxmedia.se/themes/hueman/
+	Description: Sample child theme for customization.
+	Author: NSI
+	Author URI: http://www.nusansifor.com
+	Template: hueman
+	Version: 1.0.0
+*/
+@import url("../hueman/style.css");
+/* ------------------------------------------------------------------------- *
+ *  Theme customization starts here
+/* ------------------------------------------------------------------------- */
+/* Global */
+.mystyle {}
+/* Tablet - 800px, 768px & 720px */
+@media only screen and (min-width: 720px) and (max-width: 800px) {
+	.mystyle {}
+}
+/* Mobile - 480px & 320px */
+@media only screen and (max-width: 719px) {
+	.mystyle {}
+}
+/* Mobile - 320px */
+@media only screen and (max-width: 479px) {
+	.mystyle {}
+}
+.entry tr.crayon-row.alt {
+	background-color: transparent !important;
+}
+.textwidget li:before {
+	font-family: 'FontAwesome';
+	content: '\f007';
+	margin:0 0 0 -15px;
+	color: #22B14C;
+}
+.text-primary {
+	font-weight: bold;
+}
+.nav ul { z-index: 20000 !important;}
+.nav ul li { z-index: 20000 !important;}
+
+#footer a, .widget a {
+	color: #3b8dbd;
+}
+
+/* jinbatsu here */
+.move-wordpress-comments form, .move-wordpress-comments input {
+	display: inline-block !important;
+}
+.move-wordpress-comments {
+	float: right;
+	background-color: #ddd;
+}
